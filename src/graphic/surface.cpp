@@ -25,6 +25,7 @@
 #include <SDL_image.h>
 #include <SDL_rotozoom.h>
 #include <png.h>
+#include <zlib.h>
 
 #include "graphic/surface.h"
 #include "tool/math_tools.h"
