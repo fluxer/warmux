@@ -122,7 +122,7 @@ bool Downloader::GetUrl(const std::string& url, std::string* out)
 bool Downloader::Post(const std::string& url, std::string* out, const std::string& fields)
 {
   if (!fields.empty())
-    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, fields);
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, fields.c_str());
   return HttpMethod(url, out, CURLOPT_POST);
 }
 
