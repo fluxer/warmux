@@ -640,7 +640,7 @@ msgstr "Μπάλα Αναπήδησης"
 msgid "Bye bye Tux..."
 msgstr "Άντε γεια tux..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -846,7 +846,7 @@ msgstr "Κατασκευή"
 msgid "Controlled by: "
 msgstr "Ελεγχόμενος από:"
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "Δεν μπόρεσε να πάρει την τελευταία έκδοση από τον %s"
@@ -1368,7 +1368,7 @@ msgstr "Φόρτωση ομάδων:"
 msgid "Local teams:"
 msgstr "Ομάδες τοπικά:"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1563,7 +1563,7 @@ msgstr "Κανένα στοιχείο <%s> δεν βρέθηκε στο αρχε
 msgid "No player connected"
 msgstr "Κανένας παίκτης συνδεδεμένος"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr "Όχι δείκτης"
 
@@ -1806,7 +1806,7 @@ msgid "Random map"
 msgstr "Τυχαίος χάρτης"
 
 # Il n'y a que %i équipe.
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, c-format
 msgid "Read only %i bytes"
 msgstr "Διάβασε μόνο %i bytes"
@@ -2014,12 +2014,25 @@ msgstr "Κάποιος παγίδευσε το κιβώτιο!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Συγγνώμη, δεν υπάρχει κανένα παιχνίδι να περιμένει παίκτες"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Συγγνώμη,  η έκδοσή σας δεν υποστηρίζεται τώρα. Οι υποστηριζόμενες εκδόσεις "
+"είναι οι %s. Μπορείτε να κατεβάσετε μία ενημερωμένη έκδοση στο  http://www."
+"warmux.org/wiki/download.php"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+#| msgid ""
+#| "Sorry, your version is not supported anymore. Supported versions are %s. "
+#| "You can download an updated version from http://www.warmux.org/wiki/"
+#| "download.php"
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "Συγγνώμη,  η έκδοσή σας δεν υποστηρίζεται τώρα. Οι υποστηριζόμενες εκδόσεις "
 "είναι οι %s. Μπορείτε να κατεβάσετε μία ενημερωμένη έκδοση στο  http://www."
@@ -2519,7 +2532,7 @@ msgstr "Λάθος όνομα χάρτη!"
 msgid "Wrong team!"
 msgstr "Λάθος ομάδα!"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr "Γράφτηκαν %i/%i bytes"

@@ -565,7 +565,7 @@ msgstr "弹力球"
 msgid "Bye bye Tux..."
 msgstr "Bye bye Tux..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -767,7 +767,7 @@ msgstr "建筑工具"
 msgid "Controlled by: "
 msgstr "控制者: "
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "不能从 %s获取最新版本"
@@ -1266,7 +1266,7 @@ msgstr "读取队伍:"
 msgid "Local teams:"
 msgstr "本地队伍:"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1461,7 +1461,7 @@ msgstr "没找到 <%s>重点 xml配置文件 ！"
 msgid "No player connected"
 msgstr "没有玩家连接"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr "无指针"
 
@@ -1699,7 +1699,7 @@ msgstr "轨道枪"
 msgid "Random map"
 msgstr "随机读取地图"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, c-format
 msgid "Read only %i bytes"
 msgstr "只读取 %i 比特"
@@ -1905,12 +1905,24 @@ msgstr "有人在箱子里布置了炸弹作礼物！"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "抱歉噢。没人等你。"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"抱歉哦，你的版本已经不支持了。现在使用%s。下载吧，http://www.warmux.org/wiki/"
+"download.php 最好。"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+#| msgid ""
+#| "Sorry, your version is not supported anymore. Supported versions are %s. "
+#| "You can download an updated version from http://www.warmux.org/wiki/"
+#| "download.php"
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "抱歉哦，你的版本已经不支持了。现在使用%s。下载吧，http://www.warmux.org/wiki/"
 "download.php 最好。"
@@ -2384,7 +2396,7 @@ msgstr "地图名错误！"
 msgid "Wrong team!"
 msgstr "队伍错了！"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr "写入 %i/%i 比特"

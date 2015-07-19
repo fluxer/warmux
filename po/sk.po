@@ -678,7 +678,7 @@ msgstr "Skákajúca lopta"
 msgid "Bye bye Tux..."
 msgstr "Pá pá tučniak..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -875,7 +875,7 @@ msgstr "Stavať"
 msgid "Controlled by: "
 msgstr "Ovládal:"
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr ""
@@ -1381,7 +1381,7 @@ msgstr "Nahrať tímy"
 msgid "Local teams:"
 msgstr "Miestne tímy:"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1584,7 +1584,7 @@ msgstr "Nenašiel som element <%s> v konfiguračnom xml súbore!"
 msgid "No player connected"
 msgstr "Nie je pripojený žiadny hráč"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr ""
 
@@ -1803,7 +1803,7 @@ msgstr ""
 msgid "Random map"
 msgstr "Náhodná mapa"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, fuzzy, c-format
 msgid "Read only %i bytes"
 msgstr "Je tu iba %i tím."
@@ -2001,12 +2001,20 @@ msgstr "Ha! V debne bola nastražená pasca pre hlupákov!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Prepáč, ale žiadna hra nečaká na hráčov"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, fuzzy, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Prepáč, ale tvoja verzia už nie je podporovaná. Podporované verzie sú %s. "
+"Aktuálnu verziu si môžeš stiahnuť z http://www.warmux.org/wiki/download.php"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "Prepáč, ale tvoja verzia už nie je podporovaná. Podporované verzie sú %s. "
 "Aktuálnu verziu si môžeš stiahnuť z http://www.warmux.org/wiki/download.php"
@@ -2498,7 +2506,7 @@ msgstr "Neplatný názov mapy"
 msgid "Wrong team!"
 msgstr "Neplatný tím"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr ""

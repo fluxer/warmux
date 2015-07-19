@@ -644,7 +644,7 @@ msgstr "Stuiterbal"
 msgid "Bye bye Tux..."
 msgstr "Dag dag tux..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -841,7 +841,7 @@ msgstr "Bouw"
 msgid "Controlled by: "
 msgstr "Bestuurd door: "
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "Kon de laatste versie van %s niet verwerven"
@@ -1353,7 +1353,7 @@ msgstr "Teams worden geladen:"
 msgid "Local teams:"
 msgstr "Lokale teams:"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1556,7 +1556,7 @@ msgstr "Element <%s> niet gevonden het xml config bestand!"
 msgid "No player connected"
 msgstr "Geen spelers verbonden"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr ""
 
@@ -1775,7 +1775,7 @@ msgstr ""
 msgid "Random map"
 msgstr "Willekeurige kaart"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, fuzzy, c-format
 msgid "Read only %i bytes"
 msgstr "Er is maar %i team."
@@ -1973,12 +1973,21 @@ msgstr "Iemand heeft een fopcadeau gemaakt!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Sorry, er is op dit moment geen spel dat op spelers wacht"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, fuzzy, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Sorry, uw versie wordt niet meer ondersteund. Ondersteunde versies zijn %s. "
+"U kunt een nieuwere versie downloaden op http://www.warmux.org/phpboost/"
+"download/download.php"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "Sorry, uw versie wordt niet meer ondersteund. Ondersteunde versies zijn %s. "
 "U kunt een nieuwere versie downloaden op http://www.warmux.org/phpboost/"
@@ -2466,7 +2475,7 @@ msgstr "Verkeerde kaartnaam!"
 msgid "Wrong team!"
 msgstr "Verkeerd team!"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr ""

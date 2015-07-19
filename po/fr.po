@@ -629,7 +629,7 @@ msgstr "Balle Rebondissante"
 msgid "Bye bye Tux..."
 msgstr "Adieu Tux…"
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -833,7 +833,7 @@ msgstr "Construction"
 msgid "Controlled by: "
 msgstr "Contrôlé par :"
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "N'a pu récupéré la dernière version à partir de %s"
@@ -1355,7 +1355,7 @@ msgstr "Chargement des équipes :"
 msgid "Local teams:"
 msgstr "Équipes locales :"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1551,7 +1551,7 @@ msgstr ""
 msgid "No player connected"
 msgstr "Aucun joueur connecté"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr "Pas de pointeur"
 
@@ -1787,7 +1787,7 @@ msgstr "Rail Gun"
 msgid "Random map"
 msgstr "Terrain aléatoire"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, c-format
 msgid "Read only %i bytes"
 msgstr "Lu seulement %i octets"
@@ -1995,12 +1995,25 @@ msgstr "Quelqu'un a placé un piège dans cette boîte !"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Désolé, il n'y a actuellement aucun jeu en attente de joueurs"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Désolé, votre version du jeu n'est plus supporté. Les versions supportées "
+"sont les versions %s. Vous pouvez télécharger une version à jour sur http://"
+"www.warmux.org/wiki/download.php"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+#| msgid ""
+#| "Sorry, your version is not supported anymore. Supported versions are %s. "
+#| "You can download an updated version from http://www.warmux.org/wiki/"
+#| "download.php"
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "Désolé, votre version du jeu n'est plus supporté. Les versions supportées "
 "sont les versions %s. Vous pouvez télécharger une version à jour sur http://"
@@ -2484,7 +2497,7 @@ msgstr "Nom du terrain erroné !"
 msgid "Wrong team!"
 msgstr "Equipe erronée !"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr "Seulement %i/%i octets écrits"

@@ -582,7 +582,7 @@ msgstr "شیطونک"
 msgid "Bye bye Tux..."
 msgstr "بای بای تاکس..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -782,7 +782,7 @@ msgstr "سازه"
 msgid "Controlled by: "
 msgstr "کنترل شده بوسیله‌ی: "
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr ""
@@ -1281,7 +1281,7 @@ msgstr "بارگذاری تیم‌ها: "
 msgid "Local teams:"
 msgstr "تیم‌های محلی: "
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1490,7 +1490,7 @@ msgstr "هیچ عنصر <%s> در پرونده‌ی تنظیم xml پیدا نش
 msgid "No player connected"
 msgstr "بازیکن %i وصل شد"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr ""
 
@@ -1707,7 +1707,7 @@ msgstr ""
 msgid "Random map"
 msgstr "نقشه تصادفی"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, fuzzy, c-format
 msgid "Read only %i bytes"
 msgstr "فقط %i تیم وجود دارد."
@@ -1905,12 +1905,18 @@ msgstr ""
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "شرمنده، در حال حاضر، هیچ بازی منتظر بازیکنان دیگر نیست."
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+
+#: src/menu/network_connection_menu.cpp:472
+#, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 
 #: src/menu/options_menu.cpp:314
@@ -2396,7 +2402,7 @@ msgstr ""
 msgid "Wrong team!"
 msgstr ""
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr ""

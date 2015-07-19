@@ -625,7 +625,7 @@ msgstr "Sprettball"
 msgid "Bye bye Tux..."
 msgstr "Hadé tux!!"
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -824,7 +824,7 @@ msgstr "Konstruer"
 msgid "Controlled by: "
 msgstr "Kontrollert av: "
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "Kunne ikke hente siste versjon fra %s"
@@ -1329,7 +1329,7 @@ msgstr "Last lagene :"
 msgid "Local teams:"
 msgstr "Lokale lag :"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1535,7 +1535,7 @@ msgstr "Ikke noe element <%s> kunne bli funnet i konfigurasjonsfilet for XML !"
 msgid "No player connected"
 msgstr "%i spiller tilkoblet"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr ""
 
@@ -1753,7 +1753,7 @@ msgstr ""
 msgid "Random map"
 msgstr "Tilfeldig kart"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, fuzzy, c-format
 msgid "Read only %i bytes"
 msgstr "Det er i øyeblikket %i lag."
@@ -1952,12 +1952,18 @@ msgstr "Noen har plassert en felle i krateret!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Beklager, for øyeblikket er det ingen spill som venter på spillere"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+
+#: src/menu/network_connection_menu.cpp:472
+#, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 
 #: src/menu/options_menu.cpp:314
@@ -2437,7 +2443,7 @@ msgstr ""
 msgid "Wrong team!"
 msgstr ""
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr ""

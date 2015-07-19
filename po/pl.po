@@ -679,7 +679,7 @@ msgstr "Odbijająca się kula"
 msgid "Bye bye Tux..."
 msgstr "Pa, pa Tux..."
 
-#: lib/warmux/net/download.cpp:437
+#: lib/warmux/net/download.cpp:492
 msgid "Can't find authenticity_token"
 msgstr ""
 
@@ -883,7 +883,7 @@ msgstr "Konstrukcja"
 msgid "Controlled by: "
 msgstr "Kontrolowany przez: "
 
-#: lib/warmux/net/download.cpp:231
+#: lib/warmux/net/download.cpp:306
 #, c-format
 msgid "Couldn't fetch last version from %s"
 msgstr "Nie można pobrać ostatniej wersji z %s"
@@ -1398,7 +1398,7 @@ msgstr "Wczytywanie drużyn:"
 msgid "Local teams:"
 msgstr "Drużyny lokalne:"
 
-#: lib/warmux/net/download.cpp:352
+#: lib/warmux/net/download.cpp:424
 msgid "Login error, probably invalid email or password"
 msgstr ""
 
@@ -1593,7 +1593,7 @@ msgstr "Element <%s> nie został odnaleziony w pliku konfiguracyjnym xml!"
 msgid "No player connected"
 msgstr "Brak połączonych graczy"
 
-#: lib/warmux/net/download.cpp:201
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
 msgid "No pointer"
 msgstr "Bez wskaźnika"
 
@@ -1831,7 +1831,7 @@ msgstr "Railgun"
 msgid "Random map"
 msgstr "Losowa mapa"
 
-#: lib/warmux/net/download.cpp:195
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
 #, c-format
 msgid "Read only %i bytes"
 msgstr "Przeczytano tylko %i bajtów."
@@ -2037,12 +2037,25 @@ msgstr "Ktoś wsadził minę pułapkę do kontenera!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Przykro nam, ale aktualnie nie ma gry oczekującej na graczy"
 
-#: src/menu/network_connection_menu.cpp:472
 #: tools/servers/game_server/server.cpp:386
 #, c-format
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Przykro nam, ale wsparcie dla tej wersji zostało zakończone. Wspierane "
+"wersje to %s. Możesz pobrać zaktualizowaną wersję ze strony http://www."
+"warmux.org/wiki/download.php"
+
+#: src/menu/network_connection_menu.cpp:472
+#, fuzzy, c-format
+#| msgid ""
+#| "Sorry, your version is not supported anymore. Supported versions are %s. "
+#| "You can download an updated version from http://www.warmux.org/wiki/"
+#| "download.php"
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.wormux.org/wiki/download.php"
 msgstr ""
 "Przykro nam, ale wsparcie dla tej wersji zostało zakończone. Wspierane "
 "wersje to %s. Możesz pobrać zaktualizowaną wersję ze strony http://www."
@@ -2535,7 +2548,7 @@ msgstr "Nieprawidłowa nazwa mapy!"
 msgid "Wrong team!"
 msgstr "Nieprawidłowa drużyna!"
 
-#: lib/warmux/net/download.cpp:211
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
 #, c-format
 msgid "Wrote %i/%i bytes"
 msgstr "Zapisano %i/%i bajtów"
