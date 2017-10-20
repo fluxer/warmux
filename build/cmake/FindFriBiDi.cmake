@@ -1,46 +1,50 @@
-# - Find the native FriBiDI includes and library
+# - Try to find the FriBiDI
+# Once done this will define
 #
-# This module defines
-#  FRIBIDI_INCLUDE_DIR, where to find fribidi.h, etc.
-#  FRIBIDI_LIBRARIES, the libraries to link against to use FriBiDi.
-#  FRIBIDI_FOUND, If false, do not try to use fribidi.
-# also defined, but not for general use are
-#  FRIBIDI_LIBRARY, where to find the FriBiDi library.
+#  FRIBIDI_FOUND - system has FriBiDI
+#  FRIBIDI_INCLUDES - the FriBiDI include directory
+#  FRIBIDI_LIBRARIES - the libraries needed to use FriBiDI
+#  FRIBIDI_DEFINITIONS - the compiler definitions needed to use FriBiDI
+#
+# Copyright (c) 2017, Ivailo Monev, <xakepa10@gmail.com>
+#
+# Redistribution and use is allowed according to the terms of the BSD license.
 
-include(CheckFunctionExists)
-SET(FRIBIDI_FOUND "NO")
+if(FRIBIDI_INCLUDES AND FRIBIDI_LIBRARIES)
+    set(FRIBIDI_FIND_QUIETLY TRUE)
+endif()
 
-FIND_PATH(FRIBIDI_INCLUDE_DIR fribidi/fribidi.h
-  /usr/local/include
-  /usr/include
-  )
+if(NOT WIN32)
+    include(FindPkgConfig)
+    pkg_check_modules(PC_FRIBIDI QUIET fribidi)
+endif()
 
-SET(FRIBIDI_NAMES ${FRIBIDI_NAMES} fribidi libfribidi)
-FIND_LIBRARY(FRIBIDI_LIBRARY
-  NAMES ${FRIBIDI_NAMES}
-  PATHS /usr/lib /usr/local/lib
-  )
+find_path(FRIBIDI_INCLUDES
+    NAMES
+    fribidi.h
+    PATH_SUFFIXES
+    fribidi
+    HINTS
+    $ENV{FRIBIDIDIR}/include
+    ${PC_FRIBIDI_INCLUDEDIR}
+    ${INCLUDE_INSTALL_DIR}
+)
 
-IF (FRIBIDI_LIBRARY AND FRIBIDI_INCLUDE_DIR)
-  SET(CMAKE_REQUIRED_INCLUDES ${FRIBIDI_INCLUDE_DIR})
-  SET(CMAKE_REQUIRED_LIBRARIES ${FRIBIDI_LIBRARY})
-  CHECK_FUNCTION_EXISTS(fribidi_utf8_to_unicode FOUND_fribidi_utf8_to_unicode)
-  IF(FOUND_fribidi_utf8_to_unicode)
-    SET(FRIBIDI_LIBRARIES ${FRIBIDI_LIBRARY})
-    SET(FRIBIDI_FOUND "YES")
-  ELSE(FOUND_fribidi_utf8_to_unicode)
-    SET(FRIBIDI_LIBRARIES "NOTFOUND")
-    SET(FRIBIDI_INCLUDE_DIR "NOTFOUND")
-    SET(FRIBIDI_FOUND "NO")
-  ENDIF(FOUND_fribidi_utf8_to_unicode)
-ENDIF (FRIBIDI_LIBRARY AND FRIBIDI_INCLUDE_DIR)
+find_library(FRIBIDI_LIBRARIES
+    fribidi
+    HINTS
+    $ENV{FRIBIDIDIR}/lib
+    ${PC_FRIBIDI_LIBDIR}
+    ${LIB_INSTALL_DIR}
+)
 
-IF (FRIBIDI_FOUND)
-  IF (NOT FRIBIDI_FIND_QUIETLY)
-    MESSAGE(STATUS "Found FriBiDi: ${FRIBIDI_LIBRARY}")
-  ENDIF (NOT FRIBIDI_FIND_QUIETLY)
-ELSE (FRIBIDI_FOUND)
-  IF (FRIBIDI_FIND_REQUIRED)
-    MESSAGE(FATAL_ERROR "Could not find FriBiDi library")
-  ENDIF (FRIBIDI_FIND_REQUIRED)
-ENDIF (FRIBIDI_FOUND)
+# not definitions but rather compiler flags required for the dependencies (glib)
+set(FRIBIDI_DEFINITIONS ${PC_FRIBIDI_CFLAGS})
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(FRIBIDI
+    VERSION_VAR PC_FRIBIDI_VERSION
+    REQUIRED_VARS FRIBIDI_LIBRARIES FRIBIDI_INCLUDES
+)
+
+mark_as_advanced(FRIBIDI_INCLUDES FRIBIDI_LIBRARIES FRIBIDI_DEFINITIONS)
