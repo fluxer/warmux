@@ -55,7 +55,7 @@ int SampleCache::FindSlot( Mix_Chunk* sample, const std::string & file_name )
     m_chunks_by_addr.insert( std::make_pair( chk.m_chunk, slot ) );
 
     MSG_DEBUG( "jukebox.cache",
-               "caching sample '%s' (size %uB), total cache size: "SIZET_FORMAT"uB",
+               "caching sample '%s' (size %uB), total cache size: " SIZET_FORMAT "uB",
                chk.m_filename.c_str(), sample->alen, m_used_memory );
 
     return slot;

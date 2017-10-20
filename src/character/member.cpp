@@ -333,7 +333,7 @@ void Member::BuildAttachMemberMap(const std::vector<junction*> & skel_lst)
       }
     }
   }
-  MSG_DEBUG("body", "Mapped "SIZET_FORMAT"u/"SIZET_FORMAT"u members to member %p of type %i!\n",
+  MSG_DEBUG("body", "Mapped " SIZET_FORMAT "u/" SIZET_FORMAT "u members to member %p of type %i!\n",
             attached_members.size(), attached_types.size(), this, (int)type);
 }
 

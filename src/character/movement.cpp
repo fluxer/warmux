@@ -51,7 +51,7 @@ Movement::Movement(const xmlNode* xml) : ref_count(1), nb_loops(0), duration_per
 
   xmlNodeArray nodes = XmlReader::GetNamedChildren(xml, "frame");
   xmlNodeArray::const_iterator it = nodes.begin(), end = nodes.end();
-  MSG_DEBUG("body.movement", "  Found "SIZET_FORMAT"u movement frames", nodes.size());
+  MSG_DEBUG("body.movement", "  Found " SIZET_FORMAT "u movement frames", nodes.size());
   MSG_DEBUG("body.movement", "  Nb loops: %i", nb_loops);
 
   // We know the number of member frames that will be read,
@@ -60,7 +60,7 @@ Movement::Movement(const xmlNode* xml) : ref_count(1), nb_loops(0), duration_per
 
   for (; it != end; ++it) {
     xmlNodeArray members = XmlReader::GetNamedChildren(*it, "member");
-    MSG_DEBUG("body.movement", "    Found "SIZET_FORMAT"u frame members", members.size());
+    MSG_DEBUG("body.movement", "    Found " SIZET_FORMAT "u frame members", members.size());
 
     member_def def;
     def.reserve(members.size());

@@ -624,7 +624,7 @@ void Network::SendMapsList()
       for (uint i=0; i<map_list->lst.size(); i++)
         common_list[i] = i;
     }
-    MSG_DEBUG("action_handler.map", "Common list has now "SIZET_FORMAT"u maps\n", common_list.size());
+    MSG_DEBUG("action_handler.map", "Common list has now " SIZET_FORMAT "u maps\n", common_list.size());
 
     int index = map_list->GetActiveMapIndex();
     if (map_list->IsRandom()) {
@@ -745,7 +745,7 @@ void Network::SendTeamsList()
       for (uint i=0; i<nb; i++)
         common_list[i] = i;
     }
-    MSG_DEBUG("action_handler.team", "Common list has now "SIZET_FORMAT"u teams\n", common_list.size());
+    MSG_DEBUG("action_handler.team", "Common list has now " SIZET_FORMAT "u teams\n", common_list.size());
 
     // Browse the hosts
     std::list<DistantComputer*>::iterator it = cpu.begin();

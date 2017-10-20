@@ -131,7 +131,7 @@ void Body::Init(void) {
 void Body::LoadMembers(xmlNodeArray &      nodes,
                        const std::string & main_folder)
 {
-  MSG_DEBUG("body", "Found "SIZET_FORMAT"u sprites", nodes.size());
+  MSG_DEBUG("body", "Found " SIZET_FORMAT "u sprites", nodes.size());
   std::string                  name;
   xmlNodeArray::const_iterator it = nodes.begin();
 
@@ -157,7 +157,7 @@ void Body::LoadClothes(xmlNodeArray &  nodes,
   ASSERT(clothes);
 
   nodes = XmlReader::GetNamedChildren(clothes, "clothe");
-  MSG_DEBUG("body", "Found "SIZET_FORMAT"u clothes", nodes.size());
+  MSG_DEBUG("body", "Found " SIZET_FORMAT "u clothes", nodes.size());
   std::string name;
   xmlNodeArray::const_iterator it = nodes.begin();
 
@@ -182,7 +182,7 @@ void Body::LoadMovements(xmlNodeArray &  nodes,
   ASSERT(aliases);
 
   nodes = XmlReader::GetNamedChildren(aliases, "alias");
-  MSG_DEBUG("body", "Found "SIZET_FORMAT"u aliases", nodes.size());
+  MSG_DEBUG("body", "Found " SIZET_FORMAT "u aliases", nodes.size());
 
   std::map<std::string, std::string> mvt_alias;
   xmlNodeArray::const_iterator       it = nodes.begin();
@@ -201,7 +201,7 @@ void Body::LoadMovements(xmlNodeArray &  nodes,
   ASSERT(movements);
 
   nodes = XmlReader::GetNamedChildren(movements, "movement");
-  MSG_DEBUG("body", "Found "SIZET_FORMAT"u movements", nodes.size());
+  MSG_DEBUG("body", "Found " SIZET_FORMAT "u movements", nodes.size());
   std::string name;
 
   for (it = nodes.begin(); it != nodes.end(); ++it) {

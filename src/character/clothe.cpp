@@ -32,7 +32,7 @@ Clothe::Clothe(const xmlNode *                  xml,
 
   xmlNodeArray nodes = XmlReader::GetNamedChildren(xml, "c_member");
   xmlNodeArray::const_iterator it;
-  MSG_DEBUG("body.clothe", "   Found "SIZET_FORMAT"u clothe members in %s", nodes.size(), name.c_str());
+  MSG_DEBUG("body.clothe", "   Found " SIZET_FORMAT "u clothe members in %s", nodes.size(), name.c_str());
 
   ASSERT(nodes.size());
 
