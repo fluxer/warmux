@@ -584,9 +584,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Reiri al la batalo"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Malbona kontaktilo..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -620,10 +636,6 @@ msgstr "Resaltanta pilko"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Adiaŭ, tukso..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -820,10 +832,15 @@ msgstr "Konstruilo"
 msgid "Controlled by: "
 msgstr "Stirato per:"
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "Ne ebli elpreni la lastan version el %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Ne eblas trovi la teamon %s!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "Ne eblis malfermi dosieron %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -927,6 +944,10 @@ msgstr "LUDFINO"
 msgid "Effects volume"
 msgstr "Laŭteco de efektoj"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energio"
@@ -986,7 +1007,6 @@ msgid "Error: Unable to start the server"
 msgstr "Eraro: Ne eblas starti servilon"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, fuzzy, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1110,7 +1130,6 @@ msgstr "Preparante la grundon..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "%s teamo primurditis."
 
@@ -1328,10 +1347,6 @@ msgstr "Muntas la teamojn:"
 msgid "Local teams:"
 msgstr "Lokaj teamoj:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1339,6 +1354,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Malpezigilo"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1524,6 +1549,11 @@ msgstr "Ĉu averti pri nova ludanto?"
 msgid "Next character"
 msgstr "Movi ulon"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1533,10 +1563,6 @@ msgstr "Neniu ero <%s> trovita en la XML dosiero de agordo!"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i ludanto konektiĝis"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1595,7 +1621,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Pasvorto:"
 
@@ -1753,11 +1778,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Hazarda mapo"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Estas nur %i teamo."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1824,7 +1844,6 @@ msgstr "Komencas partion"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Pasvorto:"
 
@@ -1953,15 +1972,6 @@ msgstr "Iu metis insidon en la skatolo!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Pardonu, aktuale, neniu ludo atendantas ludantojn"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Pardonu, via versio ne plu estas subtenita. Subtenita versio estas %s. Vi "
-"povas elŝuti ĝisdatan version ĉe http://www.warmux.org/wiki/download.php"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2003,6 +2013,11 @@ msgstr "Mitraleto"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTukso"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2155,8 +2170,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Estas nur %i teamo."
@@ -2286,10 +2299,19 @@ msgstr "Nekonata komando"
 msgid "Unknown command of type %i"
 msgstr "Nekonata komando"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Nekonata komando"
+
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(senlimaj)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2377,6 +2399,11 @@ msgstr "Warmux ŝargante..."
 msgid "Warmux version "
 msgstr "Warmux versio "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2435,7 +2462,6 @@ msgstr "Gajnanto"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Malbona teamo!"
 
@@ -2456,11 +2482,6 @@ msgstr "Malbona mapnomo!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Malbona teamo!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 #, fuzzy
@@ -2553,50 +2574,32 @@ msgstr "o Legante sonan profilon: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Malferminte %d Hz %d bit-an sonon"
 
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Publikaj bataloj"
+#~ msgid "Add custom team"
+#~ msgstr "Aldoni propran teamon"
 
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Ne eblas malfermi la dosierujon de mapoj (%s)!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Ŝanĝi kategorion de armilo"
+#~ msgid "Automatically join a game"
+#~ msgstr "Aŭtomate aliĝi al ludo"
 
 #, fuzzy
 #~ msgid "Change per team number of players"
 #~ msgstr "Maksimuma kvanto da ludantoj:"
 
 #, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Klako: Centrigi la kameraon ĉe la ulo"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "Ne ebli elpreni la lastan version el %s"
+
+#~ msgid "Delete custom team"
+#~ msgstr "Forigi propran teamon"
+
+#, fuzzy
 #~ msgid "Edit player name"
 #~ msgstr "Ludanta nomo"
 
-#~ msgid "Fullscreen / window"
-#~ msgstr "Plen-ekrane/fenestre"
-
-#~ msgid "Quit battle"
-#~ msgstr "Foriri el batalo"
-
-#~ msgid "You are alone..."
-#~ msgstr "Vi estas sola..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Kiel uzi ĝin: apogu kontinue spacetosignon\n"
-#~ "Unu uzo vice"
-
-#~ msgid "Head commander: "
-#~ msgstr "Ĉefkomandoro:"
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Klako: Centrigi la kameraon ĉe la ulo"
+#~ msgid "Error in %s:%lu (Warmux %s) : %s"
+#~ msgstr "Eraro en %s:%lu (Warmux %s) : %s"
 
 #~ msgid ""
 #~ "Error:\n"
@@ -2604,21 +2607,6 @@ msgstr "o Malferminte %d Hz %d bit-an sonon"
 #~ msgstr ""
 #~ "Eraro:\n"
 #~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "Aliĝu #warmux en irc.freenode.net por trovi oponantojn."
-
-#~ msgid "Add custom team"
-#~ msgstr "Aldoni propran teamon"
-
-#~ msgid "Automatically join a game"
-#~ msgstr "Aŭtomate aliĝi al ludo"
-
-#~ msgid "Delete custom team"
-#~ msgstr "Forigi propran teamon"
-
-#~ msgid "Error in %s:%lu (Warmux %s) : %s"
-#~ msgstr "Eraro en %s:%lu (Warmux %s) : %s"
 
 #, fuzzy
 #~ msgid ""
@@ -2632,12 +2620,33 @@ msgstr "o Malferminte %d Hz %d bit-an sonon"
 #~ "ekstero. Se vi ne estas senpere konektita al la interreto, kontroli la "
 #~ "agordon de via kursilo: la TCP pordo %s devas trasendiĝi al via komputilo."
 
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Ne eblas malfermi la dosierujon de mapoj (%s)!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Plen-ekrane/fenestre"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "HOME dosiero (mediovariablo $HOME) ne troveblas!"
 
 #, fuzzy
 #~ msgid "Head commander:"
 #~ msgstr "Ĉefkomandoro:"
+
+#~ msgid "Head commander: "
+#~ msgstr "Ĉefkomandoro:"
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Kiel uzi ĝin: apogu kontinue spacetosignon\n"
+#~ "Unu uzo vice"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "Aliĝu #warmux en irc.freenode.net por trovi oponantojn."
 
 #~ msgid "Network initialization"
 #~ msgstr "Preparado de reto"
@@ -2650,10 +2659,35 @@ msgstr "o Malferminte %d Hz %d bit-an sonon"
 #~ "manume."
 
 #, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Publikaj bataloj"
+
+#~ msgid "Quit battle"
+#~ msgstr "Foriri el batalo"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Estas nur %i teamo."
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Ŝanĝi kategorion de armilo"
+
+#, fuzzy
 #~ msgid ""
 #~ "Sorry, your version is not supported anymore. Supported version are %s. "
 #~ "You can download a updated version on http://www.warmux.org/wiki/download."
 #~ "php"
+#~ msgstr ""
+#~ "Pardonu, via versio ne plu estas subtenita. Subtenita versio estas %s. Vi "
+#~ "povas elŝuti ĝisdatan version ĉe http://www.warmux.org/wiki/download.php"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
 #~ msgstr ""
 #~ "Pardonu, via versio ne plu estas subtenita. Subtenita versio estas %s. Vi "
 #~ "povas elŝuti ĝisdatan version ĉe http://www.warmux.org/wiki/download.php"
@@ -2663,3 +2697,6 @@ msgstr "o Malferminte %d Hz %d bit-an sonon"
 
 #~ msgid "Unnamed"
 #~ msgstr "Sennoma"
+
+#~ msgid "You are alone..."
+#~ msgstr "Vi estas sola..."

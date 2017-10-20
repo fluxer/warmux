@@ -632,9 +632,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Повернутись до битви"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Помилка сокету ..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -667,10 +683,6 @@ msgstr "Стрибучий м'яч"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Прощавай tux..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -860,10 +872,15 @@ msgstr "Будівництво"
 msgid "Controlled by: "
 msgstr "Провідник: "
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "Не виходить завантажити останню версію з %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Не виходить знайти команду %s!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "Не можу відкрити файл %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -967,6 +984,10 @@ msgstr "КІНЕЦЬ ГРИ"
 msgid "Effects volume"
 msgstr "Гучність ефектів"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Енергія"
@@ -1027,7 +1048,6 @@ msgid "Error: Unable to start the server"
 msgstr "Помилка: Не вийшло запустити сервер"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1149,7 +1169,6 @@ msgstr "Ініціалізація місцевості..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "Команду %s було знищено"
 
@@ -1361,10 +1380,6 @@ msgstr "Завантаження команд:"
 msgid "Local teams:"
 msgstr "Локальні команди:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1372,6 +1387,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Антигравітатор"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1552,6 +1577,11 @@ msgstr "Застереження про появу нового гравця?"
 msgid "Next character"
 msgstr "Курсори руху"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1561,10 +1591,6 @@ msgstr "Елемент <%s> не знайдений в файлі з налаш�
 #, fuzzy
 msgid "No player connected"
 msgstr "%i гравець приєднався"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1619,7 +1645,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Гасло:"
 
@@ -1774,11 +1799,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Випадкова мапа"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, c-format
-msgid "Read only %i bytes"
-msgstr "Всього %i команда."
-
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Зчитування налаштувань за замовчанням"
@@ -1843,7 +1863,6 @@ msgstr "Почати гру"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Гасло:"
 
@@ -1968,22 +1987,8 @@ msgstr "В контейнері була міна-пастка!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Вибачте, на даний момент немає ігор, що очікують гравців"
 
-#: tools/servers/game_server/server.cpp:386
-#, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Вибачте, Ваша версія програми більше не підтримується. Версії, що "
-"підтримуються наступні: %s. Ви можете завантажити останню версію за адресою "
-"http://www.warmux.org/wiki/download.php"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
-#| msgid ""
-#| "Sorry, your version is not supported anymore. Supported versions are %s. "
-#| "You can download an updated version from http://www.warmux.org/wiki/"
-#| "download.php"
 msgid ""
 "Sorry, your version is not supported anymore. Supported versions are %s. You "
 "can download an updated version from http://www.wormux.org/wiki/download.php"
@@ -2024,6 +2029,11 @@ msgstr "Автомат"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "СуперТукс"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2170,8 +2180,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Всього %i команда."
@@ -2297,9 +2305,18 @@ msgstr "Невідома команда"
 msgid "Unknown command of type %i"
 msgstr "Невідома команда %i"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Невідома команда"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "(Нескінченно)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2386,6 +2403,11 @@ msgstr "Запуск Warmux..."
 msgid "Warmux version "
 msgstr "Warmux версії "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 msgid "Weapon category 8"
 msgstr "Змінити вид зброї"
@@ -2441,7 +2463,6 @@ msgstr "Переможець"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Невірна команда!"
 
@@ -2462,11 +2483,6 @@ msgstr "Невірне ім'я карти!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Невірна команда!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 msgid "You are alone. :-/"
@@ -2554,52 +2570,29 @@ msgstr "o Завантаження звукового профілю: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Відкрито аудіо в %d Hz %d bit"
 
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Доступні битви"
-
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Неможливо відкрити тимчасовий файл (%s)!"
-
-#~ msgid "You are the new turn master!"
-#~ msgstr "Ви новий Провідник"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Змінити вид зброї"
+#~ msgid "Add custom team"
+#~ msgstr "Додати свою команду"
 
 #, fuzzy
 #~ msgid "Change per team number of players"
 #~ msgstr "Макс. кількість гравців:"
 
 #, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Клік: камера на гравці"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "Не виходить завантажити останню версію з %s"
+
+#~ msgid "Delete custom team"
+#~ msgstr "Видалити команду "
+
+#, fuzzy
 #~ msgid "Edit player name"
 #~ msgstr "Ім'я гравця"
 
-#~ msgid "Fullscreen / window"
-#~ msgstr "Повноекраний режим/Віконий режим"
-
-#~ msgid "Quit battle"
-#~ msgstr "Залишити битву"
-
-#~ msgid "You are alone..."
-#~ msgstr "Ви один..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Правила використання : зажміть пробіл\n"
-#~ "патрон за хід"
-
-#~ msgid "Head commander: "
-#~ msgstr "Провідник: "
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Клік: камера на гравці"
+#~ msgid "Error in %s:%lu (Warmux %s) : %s"
+#~ msgstr "Помилка в %s:%lu (Warmux %s) : %s"
 
 #~ msgid ""
 #~ "Error:\n"
@@ -2607,19 +2600,6 @@ msgstr "o Відкрито аудіо в %d Hz %d bit"
 #~ msgstr ""
 #~ "Помилка:\n"
 #~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr ""
-#~ "Заходьте на #warmux на irc.freenode.net щоб знайти опонентів для гри."
-
-#~ msgid "Add custom team"
-#~ msgstr "Додати свою команду"
-
-#~ msgid "Delete custom team"
-#~ msgstr "Видалити команду "
-
-#~ msgid "Error in %s:%lu (Warmux %s) : %s"
-#~ msgstr "Помилка в %s:%lu (Warmux %s) : %s"
 
 #~ msgid ""
 #~ "Error: Your server is not reachable from the internet. Check your "
@@ -2640,6 +2620,12 @@ msgstr "o Відкрито аудіо в %d Hz %d bit"
 #~ "не підключені до Інтернету напряму, перевірте налаштування Вашого "
 #~ "маршрутизатора: порт TCP %s повинен бути відкритий на Вашому компьютері."
 
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Неможливо відкрити тимчасовий файл (%s)!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Повноекраний режим/Віконий режим"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "Домашній каталог (змінна оточення $HOME) не знайдена!"
 
@@ -2647,8 +2633,38 @@ msgstr "o Відкрито аудіо в %d Hz %d bit"
 #~ msgid "Head commander:"
 #~ msgstr "Провідник: "
 
+#~ msgid "Head commander: "
+#~ msgstr "Провідник: "
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Правила використання : зажміть пробіл\n"
+#~ "патрон за хід"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr ""
+#~ "Заходьте на #warmux на irc.freenode.net щоб знайти опонентів для гри."
+
 #~ msgid "Network initialization"
 #~ msgstr "Ініціалізація мережі"
+
+#, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Доступні битви"
+
+#~ msgid "Quit battle"
+#~ msgstr "Залишити битву"
+
+#~ msgid "Read only %i bytes"
+#~ msgstr "Всього %i команда."
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Змінити вид зброї"
 
 #, fuzzy
 #~ msgid ""
@@ -2660,8 +2676,23 @@ msgstr "o Відкрито аудіо в %d Hz %d bit"
 #~ "підтримуються наступні: %s. Ви можете завантажити останню версію за "
 #~ "адресою http://www.warmux.org/wiki/download.php"
 
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
+#~ msgstr ""
+#~ "Вибачте, Ваша версія програми більше не підтримується. Версії, що "
+#~ "підтримуються наступні: %s. Ви можете завантажити останню версію за "
+#~ "адресою http://www.warmux.org/wiki/download.php"
+
 #~ msgid "Tools"
 #~ msgstr "Інструменти"
 
 #~ msgid "Unnamed"
 #~ msgstr "Без ім'я"
+
+#~ msgid "You are alone..."
+#~ msgstr "Ви один..."
+
+#~ msgid "You are the new turn master!"
+#~ msgstr "Ви новий Провідник"

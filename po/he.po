@@ -572,9 +572,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "בחזרה אל הקרב"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Socket לא תקין..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -609,10 +625,6 @@ msgstr "כדור מקפץ"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "היה שלום, טאקס..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -810,10 +822,15 @@ msgstr "בנייה"
 msgid "Controlled by: "
 msgstr "מבוקר על ידי:"
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr ""
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "לא ניתן למצוא את צוות %s !"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "לא ניתן לטעון הגדרות"
 
 #: src/network/chatlogger.cpp:52
 #, fuzzy, c-format
@@ -916,6 +933,10 @@ msgstr "סוף משחק"
 msgid "Effects volume"
 msgstr ""
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr ""
@@ -975,7 +996,6 @@ msgid "Error: Unable to start the server"
 msgstr "שגיאה: לא ניתן להפעיל את השרת"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1309,10 +1329,6 @@ msgstr "טען צוותים:"
 msgid "Local teams:"
 msgstr "צוותים מקומיים:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1320,6 +1336,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "אנטי-גרביטציה"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1508,6 +1534,11 @@ msgstr ""
 msgid "Next character"
 msgstr "מצנח"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1517,10 +1548,6 @@ msgstr "לא נמצא אלמנט <%s> בקובץ ה-xml!"
 #, fuzzy
 msgid "No player connected"
 msgstr "שחקן %i מחובר"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1735,11 +1762,6 @@ msgstr ""
 msgid "Random map"
 msgstr "מפה אקראית"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "יש רק %i צוות."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1933,13 +1955,6 @@ msgstr ""
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "עמך הסליחה, אין כרגע משחק הממתין לשחקנים"
 
-#: tools/servers/game_server/server.cpp:386
-#, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-
 #: src/menu/network_connection_menu.cpp:472
 #, c-format
 msgid ""
@@ -1980,6 +1995,11 @@ msgstr "תת מקלע"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "סופרטאקס"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2134,8 +2154,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "יש רק %i צוות."
@@ -2265,10 +2283,18 @@ msgstr ""
 msgid "Unknown command of type %i"
 msgstr ""
 
+#: src/replay/replay_info.cpp:60
+msgid "Unknown."
+msgstr ""
+
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(ללא הגבלה)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2357,6 +2383,11 @@ msgstr "Warmux נטען..."
 msgid "Warmux version "
 msgstr "גירסת Warmux "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2431,11 +2462,6 @@ msgstr ""
 
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
-msgstr ""
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
 msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2529,63 +2555,16 @@ msgstr "o טוען פרופיל סאונד: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 
-#, fuzzy
-#~ msgid "Publish updates"
-#~ msgstr "יציאה מן הקרב"
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "לא ניתן לפתוח את תיקיית המפות (%s)!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "מספר דמויותe"
+#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
+#~ msgstr "%s מנסה להתחבר לגרסה אחרת: לקוח=%s, אני=%s."
 
 #, fuzzy
 #~ msgid "Change per team number of players"
 #~ msgstr "מספר שחקנים מירבי:"
 
 #, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "שם השחקן?"
-
-#, fuzzy
-#~ msgid "Fullscreen / window"
-#~ msgstr "Plein Ã©cran ?"
-
-#~ msgid "Quit battle"
-#~ msgstr "יציאה מן הקרב"
-
-#~ msgid "You are alone..."
-#~ msgstr "אתה לבדך..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "לשימוש: החזק את מקש הרווח לחוץ\n"
-#~ "תחמושת לתור"
-
-#~ msgid "Head commander: "
-#~ msgstr "מפקד: "
-
-#, fuzzy
 #~ msgid "Click: Center the camera on the character"
 #~ msgstr "מספר דמויותe"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "שגיאה:\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "הצטרף אל #warmux ב-irc.freenode.net כדי למצוא יריבים."
-
-#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
-#~ msgstr "%s מנסה להתחבר לגרסה אחרת: לקוח=%s, אני=%s."
 
 #~ msgid "Connect !"
 #~ msgstr "התחבר!"
@@ -2595,6 +2574,10 @@ msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 
 #~ msgid "Do you really want to quit? (Y/N)"
 #~ msgstr "Voulez-vous vraiment quitter ? (O/N)"
+
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "שם השחקן?"
 
 #, fuzzy
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
@@ -2612,6 +2595,21 @@ msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 #~ msgid "Error while loading game mode %s (file %s):"
 #~ msgstr "שגיאה בעת טעינת מצב משחק %s (קובץ %s) :"
 
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "שגיאה:\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "לא ניתן לפתוח את תיקיית המפות (%s)!"
+
+#, fuzzy
+#~ msgid "Fullscreen / window"
+#~ msgstr "Plein Ã©cran ?"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "לא ניתן למצוא את תיקיית הבית (משתנה סביבה $HOME)!"
 
@@ -2619,8 +2617,22 @@ msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 #~ msgid "Head commander:"
 #~ msgstr "מפקד: "
 
+#~ msgid "Head commander: "
+#~ msgstr "מפקד: "
+
 #~ msgid "Host a game (Windows clients only)"
 #~ msgstr "CrÃ©er une partie (clients Windows seulement)"
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "לשימוש: החזק את מקש הרווח לחוץ\n"
+#~ "תחמושת לתור"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "הצטרף אל #warmux ב-irc.freenode.net כדי למצוא יריבים."
 
 #~ msgid "Most clumsy"
 #~ msgstr "המגושם ביותר"
@@ -2628,8 +2640,23 @@ msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 #~ msgid "Network initialization"
 #~ msgstr "אתחול רשת"
 
+#, fuzzy
+#~ msgid "Publish updates"
+#~ msgstr "יציאה מן הקרב"
+
+#~ msgid "Quit battle"
+#~ msgstr "יציאה מן הקרב"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "יש רק %i צוות."
+
 #~ msgid "Refresh"
 #~ msgstr "רענן"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "מספר דמויותe"
 
 #~ msgid "Tools"
 #~ msgstr "כלים"
@@ -2639,3 +2666,6 @@ msgstr "o נפתח שמע ב-%d Hz ו-%d bit"
 
 #~ msgid "XML error during loading map '%s': "
 #~ msgstr "שגיאת XML במהלך טעינת המפה '%s' :"
+
+#~ msgid "You are alone..."
+#~ msgstr "אתה לבדך..."

@@ -610,9 +610,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr ""
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Slikta ligzda ..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -647,10 +663,6 @@ msgstr "Lēkājosā bumba"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Attā attā tux..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -848,9 +860,14 @@ msgstr "Būvniecība"
 msgid "Controlled by: "
 msgstr "Kontrolē: "
 
-#: lib/warmux/net/download.cpp:306
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Nevar atrast komandu %s!"
+
+#: src/replay/replay.cpp:248
 #, c-format
-msgid "Couldn't fetch last version from %s"
+msgid "Couldn't open %s\n"
 msgstr ""
 
 #: src/network/chatlogger.cpp:52
@@ -954,6 +971,10 @@ msgstr "SPĒLES BEIGAS"
 msgid "Effects volume"
 msgstr ""
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr ""
@@ -1014,7 +1035,6 @@ msgid "Error: Unable to start the server"
 msgstr "Kļūda: Nevar sākt serveri"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1348,10 +1368,6 @@ msgstr "Ielādē komandas:"
 msgid "Local teams:"
 msgstr "Lokālās komandas:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1359,6 +1375,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Antigravitācija"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1547,6 +1573,11 @@ msgstr ""
 msgid "Next character"
 msgstr "Paršūts"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1556,10 +1587,6 @@ msgstr "<%s> elementi nav atrasti xml konfigurācijas failā!"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i spēlētājs pieslēdzies"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1775,11 +1802,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Ielādē kartes:"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Ir tikai %i komanda."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1973,13 +1995,6 @@ msgstr ""
 msgid "Sorry, currently, no game is waiting for players"
 msgstr ""
 
-#: tools/servers/game_server/server.cpp:386
-#, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-
 #: src/menu/network_connection_menu.cpp:472
 #, c-format
 msgid ""
@@ -2020,6 +2035,11 @@ msgstr "Automāts"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2173,8 +2193,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Ir tikai %i komanda."
@@ -2305,10 +2323,18 @@ msgstr ""
 msgid "Unknown command of type %i"
 msgstr ""
 
+#: src/replay/replay_info.cpp:60
+msgid "Unknown."
+msgstr ""
+
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(bezgalība)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2399,6 +2425,11 @@ msgstr "Warmux ielādējas..."
 msgid "Warmux version "
 msgstr "Warmux versija "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2473,11 +2504,6 @@ msgstr ""
 
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
-msgstr ""
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
 msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2572,56 +2598,6 @@ msgstr "o Ielādē skaņas profilu: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Atver skaņu %d Hz %d bit"
 
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Nevar atvērt karšu mapi (%s)!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Rakstzīmju skaits"
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "MAksimālais spēlētāju skaits:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Spēlētāja vārds?"
-
-#, fuzzy
-#~ msgid "Fullscreen / window"
-#~ msgstr "Pa visu ekrānu?"
-
-#~ msgid "You are alone..."
-#~ msgstr "Jūs esat viens pats..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Kā to izmantot : turiet nospiestu atstarpes taustiņu\n"
-#~ "munīcija gājienā"
-
-#~ msgid "Head commander: "
-#~ msgstr "Virspavēlnieks: "
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Rakstzīmju skaits"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Kļūda:\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr ""
-#~ "Pievienojies #warmux kanālam irc.freenode.net serverī, lai atrastu "
-#~ "pretiniekus."
-
 #~ msgid "%s team has won %u Gnu!"
 #~ msgid_plural "%s team has won %u Gnus!"
 #~ msgstr[0] "%s komanda ir ieguvusi %u Gnu!"
@@ -2660,6 +2636,14 @@ msgstr "o Atver skaņu %d Hz %d bit"
 #~ msgid "(current)"
 #~ msgstr "(pašreizējā)"
 
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "MAksimālais spēlētāju skaits:"
+
+#, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Rakstzīmju skaits"
+
 #~ msgid "Connect !"
 #~ msgstr "Pieslēgties !"
 
@@ -2668,6 +2652,10 @@ msgstr "o Atver skaņu %d Hz %d bit"
 
 #~ msgid "Do you really want to quit? (Y/N)"
 #~ msgstr "Vai tiešām vēlaties iziet? (Y/N)"
+
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Spēlētāja vārds?"
 
 #, fuzzy
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
@@ -2686,12 +2674,43 @@ msgstr "o Atver skaņu %d Hz %d bit"
 #~ msgid "Error while loading game mode %s (file %s):"
 #~ msgstr "Kļūda ielādējot spēles režīmu %s (fails %s):"
 
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Kļūda:\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Nevar atvērt karšu mapi (%s)!"
+
+#, fuzzy
+#~ msgid "Fullscreen / window"
+#~ msgstr "Pa visu ekrānu?"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "MĀJAS mape (vides mainīgias $HOME) nav atrasts!"
 
 #, fuzzy
 #~ msgid "Head commander:"
 #~ msgstr "Virspavēlnieks: "
+
+#~ msgid "Head commander: "
+#~ msgstr "Virspavēlnieks: "
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Kā to izmantot : turiet nospiestu atstarpes taustiņu\n"
+#~ "munīcija gājienā"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr ""
+#~ "Pievienojies #warmux kanālam irc.freenode.net serverī, lai atrastu "
+#~ "pretiniekus."
 
 #, fuzzy
 #~ msgid "Network deinitialization"
@@ -2700,8 +2719,16 @@ msgstr "o Atver skaņu %d Hz %d bit"
 #~ msgid "Network initialization"
 #~ msgstr "Tīkla inicializācija"
 
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Ir tikai %i komanda."
+
 #~ msgid "Refresh"
 #~ msgstr "Atjaunināt"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Rakstzīmju skaits"
 
 #~ msgid ""
 #~ "Some weapons are disabled, because of known bugs (grapple, airhammer, "
@@ -2730,3 +2757,6 @@ msgstr "o Atver skaņu %d Hz %d bit"
 #, fuzzy
 #~ msgid "XML error during loading map '%s': "
 #~ msgstr "XML kļūda ielādējot karti '%s' :"
+
+#~ msgid "You are alone..."
+#~ msgstr "Jūs esat viens pats..."

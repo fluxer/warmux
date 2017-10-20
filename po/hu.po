@@ -578,9 +578,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Folytat�s"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Hib�s socket..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -614,10 +630,6 @@ msgstr "Pattog� labda"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Viszl�t, pingvin..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -817,10 +829,15 @@ msgstr "�p�t�"
 msgid "Controlled by: "
 msgstr "Ir�ny�tja:"
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "Nem tudom leszedni az utols� verzi�t: %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Nem tal�lom a(z) %s csapatot!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "Nem tudom megnyitni a k�vetkez� f�jlt: %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -924,6 +941,10 @@ msgstr "J�T�K V�GE"
 msgid "Effects volume"
 msgstr "Hanghat�sok hangereje"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energia"
@@ -988,7 +1009,6 @@ msgid "Error: Unable to start the server"
 msgstr "Hiba: Nem siker�lt a szerver ind�t�sa"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, fuzzy, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1112,7 +1132,6 @@ msgstr "Terep el�k�sz�t�se..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "%s csapat elpusztult."
 
@@ -1330,10 +1349,6 @@ msgstr "Csapatok bet�lt�se:"
 msgid "Local teams:"
 msgstr "Helyi csapatok:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1341,6 +1356,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Alacsony gravit�ci�"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1526,6 +1551,11 @@ msgstr "Figyelmeztet�s �j j�t�kosn�l?"
 msgid "Next character"
 msgstr "Karakter mozgat�sa"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1535,10 +1565,6 @@ msgstr "A(z) <%s> elem nem tal�lhat� a konfigur�ci�s XML f�jlban!"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i j�t�kos l�pett be"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1597,7 +1623,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Jelsz�:"
 
@@ -1755,11 +1780,6 @@ msgstr ""
 msgid "Random map"
 msgstr "V�letlen p�lya"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Csak %i csapat van."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1826,7 +1846,6 @@ msgstr "J�t�k futtat�sa"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Jelsz�:"
 
@@ -1955,16 +1974,6 @@ msgstr "Valaki bomb�t rejtett a l�d�ba!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Sajn�lom, most egy j�t�k sem v�r j�t�kosokat!"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Sajn�ljuk, a te verzi�d t�bb� nem t�mogatott. A t�mogatott verzi�: %s. A "
-"http://www.warmux.org/wiki/download.php c�men tal�lod a friss�tett verzi�t. "
-"c�"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2007,6 +2016,11 @@ msgstr "G�ppisztoly"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "Szuperpingvin"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2160,8 +2174,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Csak %i csapat van."
@@ -2293,9 +2305,18 @@ msgstr "Ismeretlen parancs"
 msgid "Unknown command of type %i"
 msgstr "Ismeretlen parancs"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Ismeretlen parancs"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Korl�tlan"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2384,6 +2405,11 @@ msgstr "Warmux ind�t�sa..."
 msgid "Warmux version "
 msgstr "Warmux verzi� "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2442,7 +2468,6 @@ msgstr "Gy�ztes"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Hib�s csapat!"
 
@@ -2463,11 +2488,6 @@ msgstr "Hib�s p�lyan�v!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Hib�s csapat!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 #, fuzzy
@@ -2559,69 +2579,6 @@ msgstr "Hangprofil bet�lt�se: %s"
 #, c-format
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "Hangmin�s�g: %d Hz, %d bit"
-
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Nyilv�nos j�t�kok"
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Nem siker�lt megnyitni a p�ly�k k�nyvt�r�t (%s)!"
-
-#, fuzzy
-#~ msgid "Position of the other characters"
-#~ msgstr ""
-#~ "A kukacok "
-#~ "vĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ letlenszerĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂ elhelyezĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ se"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Fegyverkateg�ria v�lt�sa"
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "J�t�kosok maxim�lis sz�ma:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "J�t�kos neve"
-
-#~ msgid "Fullscreen / window"
-#~ msgstr "Teljesk�perny�s / ablakban"
-
-#~ msgid "Quit battle"
-#~ msgstr "Kil�p�s"
-
-#~ msgid "You are alone..."
-#~ msgstr "Egyed�l vagy..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "�gy haszn�ld : tartsd lenyomva a space-t\n"
-#~ "egy l�v�s k�r�nk�nt"
-
-#~ msgid "Head commander: "
-#~ msgstr "Parancsnok: "
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Kattint�s: Kamera karakterre �ll�t�sa"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Hiba:\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr ""
-#~ "L�pj be a #warmux szob�ba az irc.freenode.net-en, hogy ellenfeleket "
-#~ "tal�lj."
 
 #, fuzzy
 #~ msgid " has joined the party"
@@ -2748,6 +2705,10 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ msgid "C++ exception caught:"
 #~ msgstr "Elfogtam egy C++ kivĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ telt:"
 
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "J�t�kosok maxim�lis sz�ma:"
+
 #~ msgid "ClanLib error :"
 #~ msgstr "ClanLib hiba:"
 
@@ -2758,11 +2719,18 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ "betĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂltĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ se "
 #~ "kĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂzben:"
 
+#, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Kattint�s: Kamera karakterre �ll�t�sa"
+
 #~ msgid "Connect !"
 #~ msgstr "Kapcsol�d�s!"
 
 #~ msgid "Connect to an internet game"
 #~ msgstr "Kapcsol�d�s internetes j�t�khoz"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "Nem tudom leszedni az utols� verzi�t: %s"
 
 #~ msgid "Delete custom team"
 #~ msgstr "Egy�ni csapat t�rl�se"
@@ -2772,6 +2740,10 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 
 #~ msgid "Duration of the end of a turn:"
 #~ msgstr "Egy fordulĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ ideje:"
+
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "J�t�kos neve"
 
 #, fuzzy
 #~ msgid "End of the game!\n"
@@ -2817,6 +2789,13 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ "betĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂltĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ se "
 #~ "kĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂzben (%s):"
 
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Hiba:\n"
+#~ "%s"
+
 #, fuzzy
 #~ msgid ""
 #~ "Error: Your server is not reachable from the internet. Check your "
@@ -2829,6 +2808,13 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ "Ha nem k�zvetlen�l kapcsol�dsz az internetre, ellen�rizd a routered "
 #~ "be�ll�t�s�t: a(z) %s-s TCP portot �t kell ir�ny�tanod a sz�m�t�g�pedre."
 
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Nem siker�lt megnyitni a p�ly�k k�nyvt�r�t (%s)!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Teljesk�perny�s / ablakban"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "Nem tal�lhat� a felhaszn�l� k�nyvt�ra!"
 
@@ -2836,8 +2822,24 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ msgid "Head commander:"
 #~ msgstr "Parancsnok: "
 
+#~ msgid "Head commander: "
+#~ msgstr "Parancsnok: "
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "�gy haszn�ld : tartsd lenyomva a space-t\n"
+#~ "egy l�v�s k�r�nk�nt"
+
 #~ msgid "Info"
 #~ msgstr "InformĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂciĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr ""
+#~ "L�pj be a #warmux szob�ba az irc.freenode.net-en, hogy ellenfeleket "
+#~ "tal�lj."
 
 #~ msgid "Load game data..."
 #~ msgstr ""
@@ -2872,11 +2874,33 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ "vĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ lemĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ nyed "
 #~ "a WarmuxrĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂl: "
 
+#, fuzzy
+#~ msgid "Position of the other characters"
+#~ msgstr ""
+#~ "A kukacok "
+#~ "vĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ letlenszerĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂ elhelyezĂÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ se"
+
+#, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Nyilv�nos j�t�kok"
+
+#~ msgid "Quit battle"
+#~ msgstr "Kil�p�s"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Csak %i csapat van."
+
 #~ msgid "Refresh"
 #~ msgstr "Friss�t�s"
 
 #~ msgid "Remote"
 #~ msgstr "T�voli"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Fegyverkateg�ria v�lt�sa"
 
 #, fuzzy
 #~ msgid "So you have to restart Warmux after each"
@@ -2904,6 +2928,16 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #~ "Sorry, your version is not supported anymore. Supported version are %s. "
 #~ "You can download a updated version on http://www.warmux.org/wiki/download."
 #~ "php"
+#~ msgstr ""
+#~ "Sajn�ljuk, a te verzi�d t�bb� nem t�mogatott. A t�mogatott verzi�: %s. A "
+#~ "http://www.warmux.org/wiki/download.php c�men tal�lod a friss�tett "
+#~ "verzi�t. c�"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
 #~ msgstr ""
 #~ "Sajn�ljuk, a te verzi�d t�bb� nem t�mogatott. A t�mogatott verzi�: %s. A "
 #~ "http://www.warmux.org/wiki/download.php c�men tal�lod a friss�tett "
@@ -2978,6 +3012,9 @@ msgstr "Hangmin�s�g: %d Hz, %d bit"
 #, fuzzy
 #~ msgid "XML error during loading map '%s': "
 #~ msgstr "XML hiba a(z) '%s' p�lya bet�lt�se k�zben:"
+
+#~ msgid "You are alone..."
+#~ msgstr "Egyed�l vagy..."
 
 #~ msgid "You need at least two teams to play: change this in 'Options menu' !"
 #~ msgstr ""

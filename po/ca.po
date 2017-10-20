@@ -579,9 +579,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Tornar a la lluita"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Socket dolent... "
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -615,10 +631,6 @@ msgstr "Bounce Ball"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Fins ara tux... "
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -815,10 +827,15 @@ msgstr "Construir"
 msgid "Controlled by: "
 msgstr "Controlat per:"
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "No s'ha pogut tornar a la versió %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Equip %s no disponible!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "No es va poder obrir l'arxiu %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -922,6 +939,10 @@ msgstr "Fi del joc"
 msgid "Effects volume"
 msgstr "Volum dels efectes"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Enemic"
@@ -987,7 +1008,6 @@ msgid "Error: Unable to start the server"
 msgstr "Error: Imposible iniciar servidor"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, fuzzy, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1111,7 +1131,6 @@ msgstr "Inicialització..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "L'equip %s ha guanyat."
 
@@ -1331,10 +1350,6 @@ msgstr "Carrega els equips:"
 msgid "Local teams:"
 msgstr "Equips locals:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1342,6 +1357,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Baixa gravetat"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1527,6 +1552,11 @@ msgstr "Avís de nou jugador?"
 msgid "Next character"
 msgstr "Moure el personatge"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1536,10 +1566,6 @@ msgstr "Cap element <%s> trobat en el arxiu de configuració xml!"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i jugador connectat"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1598,7 +1624,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Clau:"
 
@@ -1756,11 +1781,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Mapa aleatori"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Solament hi ha %i equip."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1827,7 +1847,6 @@ msgstr "Arrenca el joc"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Clau:"
 
@@ -1958,16 +1977,6 @@ msgstr "Algú va posar un parany explosiu camuflat a caixa! "
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Lo siento, actualmente, ningún juego está esperando a jugadores"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Ho sentim, però la seva versió no té suport. La versió amb suport és %s. Pot "
-"descarregar una versió actualitzada en http://www.warmux.org/wiki/download."
-"php "
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2010,6 +2019,11 @@ msgstr "Metralleta"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2168,8 +2182,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Solament hi ha %i equip."
@@ -2301,9 +2313,18 @@ msgstr "Comando desconegut"
 msgid "Unknown command of type %i"
 msgstr "Comando desconegut"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Comando desconegut"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Il·limitat"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2393,6 +2414,11 @@ msgstr "Arrencant Warmux..."
 msgid "Warmux version "
 msgstr "Versió Warmux"
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2453,7 +2479,6 @@ msgstr "Guanyador"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Equip incorrecte!"
 
@@ -2474,11 +2499,6 @@ msgstr "Nom de mapa incorrecte!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Equip incorrecte!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 #, fuzzy
@@ -2571,62 +2591,6 @@ msgstr "o Carregant perfil de so: %s "
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Obert àudio a %d Hz %d bit "
 
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Batalla publica "
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Imposible obrir el directori dels mapas (%s)!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Canviar la categoria d'arma "
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "Nombre de jugadors màxim per equip:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Nom del jugador"
-
-#~ msgid "Fullscreen / window"
-#~ msgstr "Pantalla completa / finestra"
-
-#~ msgid "Quit battle"
-#~ msgstr "Sortir de la batalla"
-
-#~ msgid "You are alone..."
-#~ msgstr "Estàs solament... "
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Com usar-lo: mantingues premut la barra espaciadora\n"
-#~ "un arma per torn "
-
-#~ msgid "Head commander: "
-#~ msgstr "Comandant cap:"
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Clic: Centra la càmera al personatge"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Error :\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr ""
-#~ "Entra #en warmux en irc.freenode.net per a trobar algun contrincant."
-
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s: opció il·legal -- %c\n"
 
@@ -2666,11 +2630,33 @@ msgstr "o Obert àudio a %d Hz %d bit "
 #~ msgid "Automatically join a game"
 #~ msgstr "Unir-se automàticament a la partida"
 
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "Nombre de jugadors màxim per equip:"
+
+#, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Clic: Centra la càmera al personatge"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "No s'ha pogut tornar a la versió %s"
+
 #~ msgid "Delete custom team"
 #~ msgstr "Elimina l'equip personalitzat "
 
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Nom del jugador"
+
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
 #~ msgstr "Error en %s:%lu (Warmux %s) : %s"
+
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Error :\n"
+#~ "%s"
 
 #~ msgid ""
 #~ "Error: Your server is not reachable from the internet. Check your "
@@ -2692,12 +2678,34 @@ msgstr "o Obert àudio a %d Hz %d bit "
 #~ "configuració de la teva router: Port TCP %s ha de ser dirigit al teu "
 #~ "ordinador."
 
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Imposible obrir el directori dels mapas (%s)!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Pantalla completa / finestra"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "El directori HOME (la variable d'entorn $HOME) no pot ser trobat!"
 
 #, fuzzy
 #~ msgid "Head commander:"
 #~ msgstr "Comandant cap:"
+
+#~ msgid "Head commander: "
+#~ msgstr "Comandant cap:"
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Com usar-lo: mantingues premut la barra espaciadora\n"
+#~ "un arma per torn "
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr ""
+#~ "Entra #en warmux en irc.freenode.net per a trobar algun contrincant."
 
 #~ msgid "Network initialization"
 #~ msgstr "Inicialització de la xarxa"
@@ -2710,10 +2718,36 @@ msgstr "o Obert àudio a %d Hz %d bit "
 #~ "configurada. Prova connectant-te manualment."
 
 #, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Batalla publica "
+
+#~ msgid "Quit battle"
+#~ msgstr "Sortir de la batalla"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Solament hi ha %i equip."
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Canviar la categoria d'arma "
+
+#, fuzzy
 #~ msgid ""
 #~ "Sorry, your version is not supported anymore. Supported version are %s. "
 #~ "You can download a updated version on http://www.warmux.org/wiki/download."
 #~ "php"
+#~ msgstr ""
+#~ "Ho sentim, però la seva versió no té suport. La versió amb suport és %s. "
+#~ "Pot descarregar una versió actualitzada en http://www.warmux.org/wiki/"
+#~ "download.php "
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
 #~ msgstr ""
 #~ "Ho sentim, però la seva versió no té suport. La versió amb suport és %s. "
 #~ "Pot descarregar una versió actualitzada en http://www.warmux.org/wiki/"
@@ -2724,3 +2758,6 @@ msgstr "o Obert àudio a %d Hz %d bit "
 
 #~ msgid "Unnamed"
 #~ msgstr "Sense nom"
+
+#~ msgid "You are alone..."
+#~ msgstr "Estàs solament... "

@@ -642,9 +642,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Späť v boji"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Zlý socket..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -677,10 +693,6 @@ msgstr "Skákajúca lopta"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Pá pá tučniak..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -875,10 +887,15 @@ msgstr "Stavať"
 msgid "Controlled by: "
 msgstr "Ovládal:"
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr ""
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Nemôžem nájsť tím %s!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "Nemôžem otvoriť súbor %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -982,6 +999,10 @@ msgstr "KONIEC HRY"
 msgid "Effects volume"
 msgstr "Hlasitosť efektov"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energia"
@@ -1040,7 +1061,6 @@ msgid "Error: Unable to start the server"
 msgstr "Chyba: Nemôžem naštartovať server"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1163,7 +1183,6 @@ msgstr "Inicializácia zeme..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "Tím %s bol roznesený na kopytách."
 
@@ -1381,10 +1400,6 @@ msgstr "Nahrať tímy"
 msgid "Local teams:"
 msgstr "Miestne tímy:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1392,6 +1407,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Antigravitácia"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1575,6 +1600,11 @@ msgstr "Upozorniť na nového hráča?"
 msgid "Next character"
 msgstr "Presunúť postavu"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1583,10 +1613,6 @@ msgstr "Nenašiel som element <%s> v konfiguračnom xml súbore!"
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Nie je pripojený žiadny hráč"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1645,7 +1671,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Heslo:"
 
@@ -1803,11 +1828,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Náhodná mapa"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Je tu iba %i tím."
-
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Čítam obecný konfiguračný súbor"
@@ -1872,7 +1892,6 @@ msgstr "Spustiť hru"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Heslo:"
 
@@ -2001,15 +2020,6 @@ msgstr "Ha! V debne bola nastražená pasca pre hlupákov!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Prepáč, ale žiadna hra nečaká na hráčov"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Prepáč, ale tvoja verzia už nie je podporovaná. Podporované verzie sú %s. "
-"Aktuálnu verziu si môžeš stiahnuť z http://www.warmux.org/wiki/download.php"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2051,6 +2061,11 @@ msgstr "Samopal"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "Supertučniak"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2201,8 +2216,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Je tu iba %i tím."
@@ -2333,9 +2346,18 @@ msgstr "Neznámy príkaz"
 msgid "Unknown command of type %i"
 msgstr "Neznámy príkaz"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Neznámy príkaz"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Nelimitovaný"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2426,6 +2448,11 @@ msgstr "Warmux sa spúšťa"
 msgid "Warmux version "
 msgstr "Verzia hry"
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2484,7 +2511,6 @@ msgstr "Víťaz"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Neplatný tím"
 
@@ -2505,11 +2531,6 @@ msgstr "Neplatný názov mapy"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Neplatný tím"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 msgid "You are alone. :-/"
@@ -2599,235 +2620,6 @@ msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Opened audio at %d Hz %d bit"
 
 #, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Verejné súboje"
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Nemôžem otvoriť priečinok s mapami (%s)!"
-
-#~ msgid "You are the new turn master!"
-#~ msgstr "Si nový master ťahu"
-
-#, fuzzy
-#~| msgid "Find a random position for characters"
-#~ msgid "Position of the other characters"
-#~ msgstr "Náhodná poloha pre postavu"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Zmeniť kategóriu zbraní"
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "Počet tímov:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Meno hráča?"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "Pripoj sa na kanál #warmux na irc.freenode.net a nájdi si súperov."
-
-#~ msgid " has joined the party"
-#~ msgstr " sa pridal k spoločnosti"
-
-#~ msgid " has left the party"
-#~ msgstr "opustil spoločnosť"
-
-#~ msgid "%s is stupidly dead because he gone out of the map ..."
-#~ msgstr "%s je hlúpo mŕtvy, lebo sa dostal mimo mapy ..."
-
-#, fuzzy
-#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
-#~ msgstr "Warmux verzie sú rozdielne: klient=%s, server=%s."
-
-#~ msgid "(current)"
-#~ msgstr "(súčasný)"
-
-#~ msgid "<infinite_background> needs <is_open> to be set to work correctly!!"
-#~ msgstr ""
-#~ "<infinite_background> potrebuje <is_open> byť nastavené aby pracovalo "
-#~ "správne!!"
-
-#~ msgid "C++ exception caught:"
-#~ msgstr "Zachytená výnimka C++ :"
-
-#~ msgid "ClanLib error :"
-#~ msgstr "Chyba ClanLib :"
-
-#, fuzzy
-#~ msgid "ClanLib error during loading map '%s' :"
-#~ msgstr "Chyba počas načítavania mapy  '%s' :"
-
-#~ msgid "Dead of %s (%s)."
-#~ msgstr "Zabitý %s (%s)."
-
-#, fuzzy
-#~ msgid "Delete custom team"
-#~ msgstr "Vyber tímy:"
-
-#~ msgid "Do you really want to quit? (Y/N)"
-#~ msgstr "Skutočne chceš skončiť(A/N) ?"
-
-#~ msgid "Drawn game :-("
-#~ msgstr "Vyrovnaná hra :-("
-
-#, fuzzy
-#~ msgid "End of the game!\n"
-#~ msgstr "Koniec hry!\n"
-
-#, fuzzy
-#~ msgid "Error in %s:%lu (Warmux %s) : %s"
-#~ msgstr "Chyba v %s:%lu"
-
-#~ msgid "Error while loading game mode %s (file %s):"
-#~ msgstr "Chyba počas načítavania herného módu %s (súbor %s):"
-
-#~ msgid "Error while loading game mode %s from memory:"
-#~ msgstr "Chyba počas načítavania herného módu %s z pamäte:"
-
-#~ msgid "Failed to initialize network library!"
-#~ msgstr "Nedá sa inicializovať sieťová knižnica!"
-
-#~ msgid "HOME directory (environment variable $HOME) could not be found!"
-#~ msgstr "Domovský priečinok (Prostredie premennej $HOME) sa nenašiel!"
-
-#~ msgid "Info"
-#~ msgstr "Info"
-
-#~ msgid "Init data"
-#~ msgstr "za"
-
-#~ msgid "Initialisation of TTF library failed: %s"
-#~ msgstr "Inicializácia TTF knižnice zlyhala: %s"
-
-#, fuzzy
-#~ msgid "Is it a gift?"
-#~ msgstr "Je to dar ?"
-
-#, fuzzy
-#~ msgid "Load game data..."
-#~ msgstr "Načítavam údaje hry ..."
-
-#~ msgid "Ninjarope"
-#~ msgstr "Nindžalano"
-
-#~ msgid "Ok"
-#~ msgstr "OK"
-
-#~ msgid "PAUSE"
-#~ msgstr "PAUZA"
-
-#~ msgid "Please tell us your opinion of Warmux via email:"
-#~ msgstr "Prosím vyjadri nám svoj názor na Warmux cez email:"
-
-#~ msgid "Refresh"
-#~ msgstr "Obnovovanie"
-
-#~ msgid "Remote"
-#~ msgstr "Vzdialený"
-
-#, fuzzy
-#~ msgid ""
-#~ "Some weapons are disabled, because of known bugs (grapple, airhammer, "
-#~ "blowtorch, submachine gun) and surely many other things don't work either!"
-#~ msgstr ""
-#~ "Niektoré zbrane sú zablokované, kvôli známim chybám (nindžalano, vŕtačka, "
-#~ "plameňomet, SMG zbraň) a bezpochyby mnoho ďalších vecí tiež!"
-
-#~ msgid "Sound error :"
-#~ msgstr "Chyba zvuku :"
-
-#~ msgid "Team %s results:\n"
-#~ msgstr "Výsledky tímu %s :\n"
-
-#~ msgid "Thank you to deliver your opinion by following email :"
-#~ msgstr "Vdaka za doručenie tvojho názoru na tento mail :"
-
-#, fuzzy
-#~ msgid "The game has ended as a draw.\n"
-#~ msgstr "Hra skončila remízou."
-
-#~ msgid "Unable to initialize SDL library: %s"
-#~ msgstr "Nedá sa inicializovať SDL knižnca: %s"
-
-#~ msgid "Unexpected exception caught..."
-#~ msgstr "Zachytená neočakávaná výnimka..."
-
-#, fuzzy
-#~ msgid "Use sound?"
-#~ msgstr "Použi zvuk"
-
-#~ msgid ""
-#~ "WARNING! Disconnections are not yet handled. So you have to restart "
-#~ "Warmux after each disconnection!"
-#~ msgstr ""
-#~ "POZOR!! Odpojenia nie su ovládané. Takže musíš reštartovať Warmux po "
-#~ "každom odpojení!"
-
-#~ msgid ""
-#~ "WARNING!! Network is still under developement and therefore a little "
-#~ "experimental."
-#~ msgstr "POZOR!! Sieť je stále vyvíjaná a teda trochu experimentálna."
-
-#~ msgid "Wait for server informations"
-#~ msgstr "Čakám na informácie o serveri"
-
-#, fuzzy
-#~ msgid "Wait! "
-#~ msgstr "Čakám tímy"
-
-#~ msgid "Warning! Winds particles mass is too low! Set by default to 0.3"
-#~ msgstr ""
-#~ "Pozor! Množstvo častíc vetra je príliš nízke! Nastavené defaultne na 0.3"
-
-#~ msgid "Weapon %s succesfully loaded"
-#~ msgstr "Zbraň %s bola úspešne nabitá"
-
-#~ msgid "Winner : team %s"
-#~ msgstr "Víťaz : tím %s"
-
-#, fuzzy
-#~ msgid "XML error during loading map '%s': "
-#~ msgstr "XML chyba počas načítavania mapy '%s' :"
-
-#~ msgid "You need at least two teams to play: change this in 'Options menu' !"
-#~ msgstr ""
-#~ "Potrebuješ najmenej dva tímy na hru: zmeň si to v menu 'Nastavenie' !"
-
-#, fuzzy
-#~ msgid "[Music] Error : file %s does not exist"
-#~ msgstr "Súbor \"%s\" neexistuje !"
-
-#, fuzzy
-#~ msgid "[Sound] Error: File %s does not exist"
-#~ msgstr "Súbor \"%s\" neexistuje !"
-
-#~ msgid "general: "
-#~ msgstr "hlavné:"
-
-#~ msgid "Fullscreen / window"
-#~ msgstr "Na celú obrazovku / v okne"
-
-#~ msgid "You are alone..."
-#~ msgstr "Ostal si sám..."
-
-#~ msgid "Head commander: "
-#~ msgstr "Hlavný veliteľ:"
-
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Klik: Centrovať kameru na postavu"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Chyba:\n"
-#~ "%s"
-
-#, fuzzy
 #~| msgid "Most sold-out"
 #~ msgid "  Most sold-out  :  "
 #~ msgstr "Najväčší zradca"
@@ -2847,6 +2639,12 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgid "  Most violent  :  "
 #~ msgstr "Najnásilnejší"
 
+#~ msgid " has joined the party"
+#~ msgstr " sa pridal k spoločnosti"
+
+#~ msgid " has left the party"
+#~ msgstr "opustil spoločnosť"
+
 #, fuzzy
 #~| msgid "%s has won %u point of energy!"
 #~| msgid_plural "%s has won %u points of energy!"
@@ -2855,6 +2653,9 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgstr[0] "%s získal %u život!"
 #~ msgstr[1] "%s získali %u životy!"
 #~ msgstr[2] "%s získali %u životov!"
+
+#~ msgid "%s is stupidly dead because he gone out of the map ..."
+#~ msgstr "%s je hlúpo mŕtvy, lebo sa dostal mimo mapy ..."
 
 #, fuzzy
 #~| msgid "%s team has won %u gun!"
@@ -2903,6 +2704,10 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgstr[2] "Tím %s získal %u samovrážd!"
 
 #, fuzzy
+#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
+#~ msgstr "Warmux verzie sú rozdielne: klient=%s, server=%s."
+
+#, fuzzy
 #~| msgid "%s team has won %u gun!"
 #~| msgid_plural "%s team has won %u guns!"
 #~ msgid "'%s has won %u Anvil"
@@ -2929,6 +2734,14 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgstr[1] "%s získali %u životy!"
 #~ msgstr[2] "%s získali %u životov!"
 
+#~ msgid "(current)"
+#~ msgstr "(súčasný)"
+
+#~ msgid "<infinite_background> needs <is_open> to be set to work correctly!!"
+#~ msgstr ""
+#~ "<infinite_background> potrebuje <is_open> byť nastavené aby pracovalo "
+#~ "správne!!"
+
 #, fuzzy
 #~| msgid "Air Attack"
 #~ msgid "Air attack"
@@ -2954,6 +2767,23 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgid "Baseball"
 #~ msgstr "Bejzbolová palica"
 
+#~ msgid "C++ exception caught:"
+#~ msgstr "Zachytená výnimka C++ :"
+
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "Počet tímov:"
+
+#~ msgid "ClanLib error :"
+#~ msgstr "Chyba ClanLib :"
+
+#, fuzzy
+#~ msgid "ClanLib error during loading map '%s' :"
+#~ msgstr "Chyba počas načítavania mapy  '%s' :"
+
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Klik: Centrovať kameru na postavu"
+
 #, fuzzy
 #~| msgid "Connected !"
 #~ msgid "Connect !"
@@ -2964,15 +2794,40 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgid "Connect to an internet game"
 #~ msgstr "Pripojenie k hre"
 
+#~ msgid "Dead of %s (%s)."
+#~ msgstr "Zabitý %s (%s)."
+
+#, fuzzy
+#~ msgid "Delete custom team"
+#~ msgstr "Vyber tímy:"
+
+#~ msgid "Do you really want to quit? (Y/N)"
+#~ msgstr "Skutočne chceš skončiť(A/N) ?"
+
+#~ msgid "Drawn game :-("
+#~ msgstr "Vyrovnaná hra :-("
+
 #, fuzzy
 #~| msgid "Duration of a turn"
 #~ msgid "Duration of the end of a turn:"
 #~ msgstr "Dĺžka ťahu"
 
 #, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Meno hráča?"
+
+#, fuzzy
+#~ msgid "End of the game!\n"
+#~ msgstr "Koniec hry!\n"
+
+#, fuzzy
 #~| msgid "Error loading team :"
 #~ msgid "Error during loading skin %s:"
 #~ msgstr "Chyba pri nahrávaní tímu :"
+
+#, fuzzy
+#~ msgid "Error in %s:%lu (Warmux %s) : %s"
+#~ msgstr "Chyba v %s:%lu"
 
 #, fuzzy
 #~| msgid "Error loading team :"
@@ -2997,10 +2852,66 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgstr ""
 #~ "Chyba pri vytváraní priečinku \"%s\": nemôžem uložiť konfiguračný súbor."
 
+#~ msgid "Error while loading game mode %s (file %s):"
+#~ msgstr "Chyba počas načítavania herného módu %s (súbor %s):"
+
+#~ msgid "Error while loading game mode %s from memory:"
+#~ msgstr "Chyba počas načítavania herného módu %s z pamäte:"
+
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Chyba:\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Nemôžem otvoriť priečinok s mapami (%s)!"
+
+#~ msgid "Failed to initialize network library!"
+#~ msgstr "Nedá sa inicializovať sieťová knižnica!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Na celú obrazovku / v okne"
+
+#~ msgid "HOME directory (environment variable $HOME) could not be found!"
+#~ msgstr "Domovský priečinok (Prostredie premennej $HOME) sa nenašiel!"
+
 #, fuzzy
 #~| msgid "Head commander: "
 #~ msgid "Head commander:"
 #~ msgstr "Hlavný veliteľ:"
+
+#~ msgid "Head commander: "
+#~ msgstr "Hlavný veliteľ:"
+
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Ako to použiť : Drž medzerník stlačený\n"
+#~ "jeden zásobník na jeden ťah"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Init data"
+#~ msgstr "za"
+
+#~ msgid "Initialisation of TTF library failed: %s"
+#~ msgstr "Inicializácia TTF knižnice zlyhala: %s"
+
+#, fuzzy
+#~ msgid "Is it a gift?"
+#~ msgstr "Je to dar ?"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "Pripoj sa na kanál #warmux na irc.freenode.net a nájdi si súperov."
+
+#, fuzzy
+#~ msgid "Load game data..."
+#~ msgstr "Načítavam údaje hry ..."
 
 #, fuzzy
 #~| msgid "Load maps:"
@@ -3017,10 +2928,83 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgid "Network initialization"
 #~ msgstr "Inicializácia zeme..."
 
+#~ msgid "Ninjarope"
+#~ msgstr "Nindžalano"
+
+#~ msgid "Ok"
+#~ msgstr "OK"
+
+#~ msgid "PAUSE"
+#~ msgstr "PAUZA"
+
+#~ msgid "Please tell us your opinion of Warmux via email:"
+#~ msgstr "Prosím vyjadri nám svoj názor na Warmux cez email:"
+
+#, fuzzy
+#~| msgid "Find a random position for characters"
+#~ msgid "Position of the other characters"
+#~ msgstr "Náhodná poloha pre postavu"
+
+#, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Verejné súboje"
+
+#~ msgid "Quit battle"
+#~ msgstr "Opustiť súboj"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Je tu iba %i tím."
+
+#~ msgid "Refresh"
+#~ msgstr "Obnovovanie"
+
+#~ msgid "Remote"
+#~ msgstr "Vzdialený"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Zmeniť kategóriu zbraní"
+
+#~ msgid "Show/hide the minimap"
+#~ msgstr "Ukázať/skryť mini mapu"
+
+#, fuzzy
+#~ msgid ""
+#~ "Some weapons are disabled, because of known bugs (grapple, airhammer, "
+#~ "blowtorch, submachine gun) and surely many other things don't work either!"
+#~ msgstr ""
+#~ "Niektoré zbrane sú zablokované, kvôli známim chybám (nindžalano, vŕtačka, "
+#~ "plameňomet, SMG zbraň) a bezpochyby mnoho ďalších vecí tiež!"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
+#~ msgstr ""
+#~ "Prepáč, ale tvoja verzia už nie je podporovaná. Podporované verzie sú %s. "
+#~ "Aktuálnu verziu si môžeš stiahnuť z http://www.warmux.org/wiki/download."
+#~ "php"
+
+#~ msgid "Sound error :"
+#~ msgstr "Chyba zvuku :"
+
 #, fuzzy
 #~| msgid "Sounds"
 #~ msgid "Sound options"
 #~ msgstr "Zvuky"
+
+#~ msgid "Team %s results:\n"
+#~ msgstr "Výsledky tímu %s :\n"
+
+#~ msgid "Thank you to deliver your opinion by following email :"
+#~ msgstr "Vdaka za doručenie tvojho názoru na tento mail :"
+
+#, fuzzy
+#~ msgid "The game has ended as a draw.\n"
+#~ msgstr "Hra skončila remízou."
 
 #, fuzzy
 #~| msgid "Error: Unable to contact the index server to host a game"
@@ -3032,35 +3016,86 @@ msgstr "o Opened audio at %d Hz %d bit"
 #~ msgid "Unable to contact top server!"
 #~ msgstr "Nemožno kontaktovať host."
 
+#~ msgid "Unable to initialize SDL library: %s"
+#~ msgstr "Nedá sa inicializovať SDL knižnca: %s"
+
 #, fuzzy
 #~| msgid "Unable to contact the host."
 #~ msgid "Unable to join the game..."
 #~ msgstr "Nemožno kontaktovať host."
+
+#~ msgid "Unexpected exception caught..."
+#~ msgstr "Zachytená neočakávaná výnimka..."
+
+#, fuzzy
+#~ msgid "Use sound?"
+#~ msgstr "Použi zvuk"
+
+#~ msgid ""
+#~ "WARNING! Disconnections are not yet handled. So you have to restart "
+#~ "Warmux after each disconnection!"
+#~ msgstr ""
+#~ "POZOR!! Odpojenia nie su ovládané. Takže musíš reštartovať Warmux po "
+#~ "každom odpojení!"
+
+#~ msgid ""
+#~ "WARNING!! Network is still under developement and therefore a little "
+#~ "experimental."
+#~ msgstr "POZOR!! Sieť je stále vyvíjaná a teda trochu experimentálna."
 
 #, fuzzy
 #~| msgid "Waiting for %s"
 #~ msgid "Wait for server"
 #~ msgstr "Čakanie na %s"
 
+#~ msgid "Wait for server informations"
+#~ msgstr "Čakám na informácie o serveri"
+
+#, fuzzy
+#~ msgid "Wait! "
+#~ msgstr "Čakám tímy"
+
+#~ msgid "Warning! Winds particles mass is too low! Set by default to 0.3"
+#~ msgstr ""
+#~ "Pozor! Množstvo častíc vetra je príliš nízke! Nastavené defaultne na 0.3"
+
 #, fuzzy
 #~| msgid "! Map %s not found :-("
 #~ msgid "Weapon %s not loaded :-("
 #~ msgstr "Mapa %s nebola nájdená"
+
+#~ msgid "Weapon %s succesfully loaded"
+#~ msgstr "Zbraň %s bola úspešne nabitá"
 
 #, fuzzy
 #~| msgid "Weapons"
 #~ msgid "Weapon:"
 #~ msgstr "Zbrane"
 
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
+#~ msgid "Winner : team %s"
+#~ msgstr "Víťaz : tím %s"
+
+#, fuzzy
+#~ msgid "XML error during loading map '%s': "
+#~ msgstr "XML chyba počas načítavania mapy '%s' :"
+
+#~ msgid "You are alone..."
+#~ msgstr "Ostal si sám..."
+
+#~ msgid "You are the new turn master!"
+#~ msgstr "Si nový master ťahu"
+
+#~ msgid "You need at least two teams to play: change this in 'Options menu' !"
 #~ msgstr ""
-#~ "Ako to použiť : Drž medzerník stlačený\n"
-#~ "jeden zásobník na jeden ťah"
+#~ "Potrebuješ najmenej dva tímy na hru: zmeň si to v menu 'Nastavenie' !"
 
-#~ msgid "Quit battle"
-#~ msgstr "Opustiť súboj"
+#, fuzzy
+#~ msgid "[Music] Error : file %s does not exist"
+#~ msgstr "Súbor \"%s\" neexistuje !"
 
-#~ msgid "Show/hide the minimap"
-#~ msgstr "Ukázať/skryť mini mapu"
+#, fuzzy
+#~ msgid "[Sound] Error: File %s does not exist"
+#~ msgstr "Súbor \"%s\" neexistuje !"
+
+#~ msgid "general: "
+#~ msgstr "hlavné:"

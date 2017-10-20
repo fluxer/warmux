@@ -528,8 +528,24 @@ msgstr ""
 msgid "Back to battle"
 msgstr ""
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
+msgstr ""
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
 msgstr ""
 
 #: src/weapon/baseball.cpp:54
@@ -565,10 +581,6 @@ msgstr "Zıplayan Top"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Bay bay tux..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -761,10 +773,15 @@ msgstr "İnşa Et"
 msgid "Controlled by: "
 msgstr ""
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr ""
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "%s takımı bulunamadı!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "SDL kütüphanesi başlatılamadı: %s"
 
 #: src/network/chatlogger.cpp:52
 #, fuzzy, c-format
@@ -867,6 +884,10 @@ msgstr ""
 msgid "Effects volume"
 msgstr ""
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr ""
@@ -927,7 +948,6 @@ msgid "Error: Unable to start the server"
 msgstr "(%s) harita dizini açılamadı!"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1253,10 +1273,6 @@ msgstr "Takımları yükle:"
 msgid "Local teams:"
 msgstr "Takımları yükle:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1264,6 +1280,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Düşük yer çekimi"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1451,6 +1477,11 @@ msgstr ""
 msgid "Next character"
 msgstr "Paraşüt"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1458,10 +1489,6 @@ msgstr "XML ayar dosyasında <%s> elementi bulunamadı!"
 
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
-msgstr ""
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
 msgstr ""
 
 #: src/menu/results_menu.cpp:91
@@ -1679,11 +1706,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Haritaları yükle:"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, c-format
-msgid "Read only %i bytes"
-msgstr ""
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1874,13 +1896,6 @@ msgstr ""
 msgid "Sorry, currently, no game is waiting for players"
 msgstr ""
 
-#: tools/servers/game_server/server.cpp:386
-#, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-
 #: src/menu/network_connection_menu.cpp:472
 #, c-format
 msgid ""
@@ -1921,6 +1936,11 @@ msgstr "Makinalı Tüfek"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2190,10 +2210,18 @@ msgstr ""
 msgid "Unknown command of type %i"
 msgstr ""
 
+#: src/replay/replay_info.cpp:60
+msgid "Unknown."
+msgstr ""
+
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(sınırsız)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2272,6 +2300,11 @@ msgstr "Warmux çalıştırılıyor..."
 msgid "Warmux version "
 msgstr "Warmux sürüm "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 msgid "Weapon category 8"
 msgstr ""
@@ -2346,11 +2379,6 @@ msgstr ""
 
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
-msgstr ""
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
 msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2442,30 +2470,6 @@ msgid "o Opened audio at %d Hz %d bit"
 msgstr ""
 
 #, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "(%s) harita dizini açılamadı!"
-
-#, fuzzy
-#~| msgid "Find a random position for characters"
-#~ msgid "Position of the other characters"
-#~ msgstr "Karakterler için rastgele yer bul"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Oyuncu isimleri?"
-
-#, fuzzy
-#~ msgid "Fullscreen / window"
-#~ msgstr "Tam ekran?"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Hata:\n"
-#~ "%s"
-
-#, fuzzy
 #~ msgid " has joined the party"
 #~ msgstr "%s harita dışına çıktı!"
 
@@ -2508,6 +2512,10 @@ msgstr ""
 #~ msgstr "Gerçekten çıkmak istiyor musunuz? (Y/N)"
 
 #, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Oyuncu isimleri?"
+
+#, fuzzy
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
 #~ msgstr "%s:%lu'da hata"
 
@@ -2532,9 +2540,24 @@ msgstr ""
 #~ msgid "Error while loading game mode %s from memory:"
 #~ msgstr "%s oyun modu yüklenirken hata (dosya %s):"
 
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Hata:\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "(%s) harita dizini açılamadı!"
+
 #, fuzzy
 #~ msgid "Failed to initialize network library!"
 #~ msgstr "SDL kütüphanesi başlatılamadı: %s"
+
+#, fuzzy
+#~ msgid "Fullscreen / window"
+#~ msgstr "Tam ekran?"
 
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "Ev dizini ($HOME çevre değeri) bulunamadı!"
@@ -2555,6 +2578,11 @@ msgstr ""
 
 #~ msgid "Ninjarope"
 #~ msgstr "Ninja ipi"
+
+#, fuzzy
+#~| msgid "Find a random position for characters"
+#~ msgid "Position of the other characters"
+#~ msgstr "Karakterler için rastgele yer bul"
 
 #~ msgid "Unable to initialize SDL library: %s"
 #~ msgstr "SDL kütüphanesi başlatılamadı: %s"

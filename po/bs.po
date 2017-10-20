@@ -581,9 +581,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr ""
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Neispravan socket ..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -618,10 +634,6 @@ msgstr "Bomba odskočica"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Ćao ćao tux ..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -820,9 +832,14 @@ msgstr "Konstruiraj"
 msgid "Controlled by: "
 msgstr "Kontroliran od strane:"
 
-#: lib/warmux/net/download.cpp:306
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Ne može naći tim %s!"
+
+#: src/replay/replay.cpp:248
 #, c-format
-msgid "Couldn't fetch last version from %s"
+msgid "Couldn't open %s\n"
 msgstr ""
 
 #: src/network/chatlogger.cpp:52
@@ -926,6 +943,10 @@ msgstr "KRAJ IGRE"
 msgid "Effects volume"
 msgstr ""
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr ""
@@ -994,7 +1015,6 @@ msgid "Error: Unable to start the server"
 msgstr "Greška: Nemoguće startati server"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1326,10 +1346,6 @@ msgstr "Učitaj timove:"
 msgid "Local teams:"
 msgstr "Lokalni timovi:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1337,6 +1353,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "LowGrav"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1525,6 +1551,11 @@ msgstr ""
 msgid "Next character"
 msgstr "Padobran"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1534,10 +1565,6 @@ msgstr "Nijedan element  <%s> nije nađen u xml konfiguracionoj datoteci!"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i igrač konektovan"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1753,11 +1780,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Učitaj mape:"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Postoji samo %i tim."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1951,13 +1973,6 @@ msgstr ""
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Sorry, trenutno nema igre koja čeka igrače"
 
-#: tools/servers/game_server/server.cpp:386
-#, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-
 #: src/menu/network_connection_menu.cpp:472
 #, c-format
 msgid ""
@@ -1998,6 +2013,11 @@ msgstr "Mašinka"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2152,8 +2172,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Postoji samo %i tim."
@@ -2283,10 +2301,18 @@ msgstr ""
 msgid "Unknown command of type %i"
 msgstr ""
 
+#: src/replay/replay_info.cpp:60
+msgid "Unknown."
+msgstr ""
+
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(neograničeno)"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2375,6 +2401,11 @@ msgstr "Warmux se učitava..."
 msgid "Warmux version "
 msgstr "Warmux verzija "
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2450,11 +2481,6 @@ msgstr ""
 
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
-msgstr ""
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
 msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2553,54 +2579,16 @@ msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Otvoren audio na %d Hz %d bit"
 
 #, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Nije u stanju da otvori direktorij sa mapama (%s)!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Broj likova"
+#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
+#~ msgstr "Warmux verzije su drugačije : klijent=%s, server=%s."
 
 #, fuzzy
 #~ msgid "Change per team number of players"
 #~ msgstr "Maximalan broj igrača:"
 
 #, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Prikaži ime igrača?"
-
-#, fuzzy
-#~ msgid "Fullscreen / window"
-#~ msgstr "Pun ekran?"
-
-#~ msgid "You are alone..."
-#~ msgstr "Sami ste ..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr "Kako korisiti : drži space<br> municija po redu"
-
-#~ msgid "Head commander: "
-#~ msgstr "Vojskovođa:"
-
-#, fuzzy
 #~ msgid "Click: Center the camera on the character"
 #~ msgstr "Broj likova"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Greška :\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "Dođi na #warmux na irc.freenode.net da pronađeš protivnika"
-
-#, fuzzy
-#~ msgid "%s tries to connect with a different version : client=%s, me=%s."
-#~ msgstr "Warmux verzije su drugačije : klijent=%s, server=%s."
 
 #~ msgid "Connect !"
 #~ msgstr "Konektuj!"
@@ -2610,6 +2598,10 @@ msgstr "o Otvoren audio na %d Hz %d bit"
 
 #~ msgid "Do you really want to quit? (Y/N)"
 #~ msgstr "Da li želite da izađete? (Y/N)"
+
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Prikaži ime igrača?"
 
 #, fuzzy
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
@@ -2627,6 +2619,21 @@ msgstr "o Otvoren audio na %d Hz %d bit"
 #~ msgid "Error while loading game mode %s (file %s):"
 #~ msgstr "Greška tokom učitavanja moda igre  %s (file %s):"
 
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Greška :\n"
+#~ "%s"
+
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Nije u stanju da otvori direktorij sa mapama (%s)!"
+
+#, fuzzy
+#~ msgid "Fullscreen / window"
+#~ msgstr "Pun ekran?"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr ""
 #~ "HOME direktor (okolina promjenjiva $HOME) nije mogla biti pronađena!"
@@ -2634,6 +2641,18 @@ msgstr "o Otvoren audio na %d Hz %d bit"
 #, fuzzy
 #~ msgid "Head commander:"
 #~ msgstr "Vojskovođa:"
+
+#~ msgid "Head commander: "
+#~ msgstr "Vojskovođa:"
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr "Kako korisiti : drži space<br> municija po redu"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "Dođi na #warmux na irc.freenode.net da pronađeš protivnika"
 
 #, fuzzy
 #~ msgid "Network deinitialization"
@@ -2643,8 +2662,16 @@ msgstr "o Otvoren audio na %d Hz %d bit"
 #~ msgid "Network initialization"
 #~ msgstr "Initalaizacija baze ..."
 
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Postoji samo %i tim."
+
 #~ msgid "Refresh"
 #~ msgstr "Osvježi"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Broj likova"
 
 #~ msgid "Tools"
 #~ msgstr "Alati"
@@ -2655,3 +2682,6 @@ msgstr "o Otvoren audio na %d Hz %d bit"
 #, fuzzy
 #~ msgid "XML error during loading map '%s': "
 #~ msgstr "XML greška tokom lodiranja mape '%s' :"
+
+#~ msgid "You are alone..."
+#~ msgstr "Sami ste ..."

@@ -676,9 +676,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Dehweles dhe'n gas"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Kraw drog..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -712,10 +728,6 @@ msgstr "Pel derlemmel"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Duw genes tux..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -910,10 +922,15 @@ msgstr "Daffar drehevel"
 msgid "Controlled by: "
 msgstr "Kontrolys gans: "
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "Ny allas kyrhes an nowyttha versyon dhyworth %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "Ny yllir kavos para %s !"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "Ny allas ygeri an restren %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -1017,6 +1034,10 @@ msgstr "DIWEDH AN GWARI"
 msgid "Effects volume"
 msgstr "Sonradh an effeythyow son"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Nerth"
@@ -1077,7 +1098,6 @@ msgid "Error: Unable to start the server"
 msgstr "Gwall: Ny allas lonchya an servyer"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, fuzzy, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1201,7 +1221,6 @@ msgstr "Ow tarbari an grond..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "Para %s a veu fraggys yn tien."
 
@@ -1421,10 +1440,6 @@ msgstr "Karga paraow:"
 msgid "Local teams:"
 msgstr "Paraow leel:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1432,6 +1447,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Gravedh Isel"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1616,6 +1641,11 @@ msgstr "Gwarnyans gwarier nowyth?"
 msgid "Next character"
 msgstr "Movya person"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1624,10 +1654,6 @@ msgstr "Ny gavas elven <%s> yn restren restransow xml!"
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Nyns eus gwarier vyth junys"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1686,7 +1712,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Ger-tremena:"
 
@@ -1844,11 +1869,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Mappa dre hap"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Nyns eus saw %i para."
-
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1915,7 +1935,6 @@ msgstr "Lonchya an gwari"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Ger-tremena:"
 
@@ -2044,16 +2063,6 @@ msgstr "Nebonan a worras maglen voba a-berth y'n gyst!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Gav dhyn, mes nyns eus gwari vyth ow kortos gwarioryon"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Gav dhyn, mes ny skodhir dha versyon a'n gwari na fella. An versyonow "
-"skodhysyw an versyons %s. Ty a yll iskarga versyon nowedhys war http://www."
-"warmux.org/wiki/download.php"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2096,6 +2105,11 @@ msgstr "Gojynn-gonn"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2248,8 +2262,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Nyns eus saw %i para."
@@ -2384,9 +2396,18 @@ msgstr "Gorhemmyn ankoth"
 msgid "Unknown command of type %i"
 msgstr "Gorhemmyn ankoth"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Gorhemmyn ankoth"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Heb finwedh"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2478,6 +2499,11 @@ msgstr "Yma Warmux ow lonchya..."
 msgid "Warmux version "
 msgstr "Versyon Warmux"
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2536,7 +2562,6 @@ msgstr "Gwaynyer"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "Para kamm!"
 
@@ -2557,11 +2582,6 @@ msgstr "Hanow an mappa yw kamm!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Para kamm!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 #, fuzzy
@@ -2654,64 +2674,6 @@ msgstr "o Ow karga an profil-son: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Awdio ygerys orth %d Hz %d byt"
 
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Kasow poblek"
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "Ny yllir ygeri an arayel vappaow (%s)!"
-
-#~ msgid "You are the new turn master!"
-#~ msgstr "Mester nowyth an dro os ta!"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Chanjya ehen arv"
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "Brassa niver a warioryon:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Hanow an gwarier"
-
-#~ msgid "Fullscreen / window"
-#~ msgstr "Skrin leun / fenester"
-
-#~ msgid "Quit battle"
-#~ msgstr "Kwitya an gas"
-
-#~ msgid "You are alone..."
-#~ msgstr "Genes dha honan th esos..."
-
-#, fuzzy
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Usyans : pesya gweskel war an alhwedhen spas\n"
-#~ "unn bellen orth an dro"
-
-#~ msgid "Head commander: "
-#~ msgstr "Penn an para: "
-
-#, fuzzy
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Klyck: Kresenni kamera war berson"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Gwall:\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "Omjun gans #warmux war irc.freende.net rag kavos nebes eskerens."
-
 #~ msgid "%s has decided to injure %s"
 #~ msgstr "%s re erviras shyndya %s"
 
@@ -2724,11 +2686,33 @@ msgstr "o Awdio ygerys orth %d Hz %d byt"
 #~ msgid "Automatically join a game"
 #~ msgstr "Omjunya gans gwari yn awtomatek"
 
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "Brassa niver a warioryon:"
+
+#, fuzzy
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Klyck: Kresenni kamera war berson"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "Ny allas kyrhes an nowyttha versyon dhyworth %s"
+
 #~ msgid "Delete custom team"
 #~ msgstr "Dilea para personelhes"
 
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Hanow an gwarier"
+
 #~ msgid "Error in %s:%lu (Warmux %s) : %s"
 #~ msgstr "Gwall yn %s:%lu (Warmux %s) : %s"
+
+#~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Gwall:\n"
+#~ "%s"
 
 #~ msgid ""
 #~ "Error: Your server is not reachable from the internet. Check your "
@@ -2749,11 +2733,32 @@ msgstr "o Awdio ygerys orth %d Hz %d byt"
 #~ "Mar nyns osta junys yn tidro dhe'n Gesrosweyth, check fyttyans dha "
 #~ "routyer: Res yw dhe'n Port TCP %s bos danvenys pella y'th jynn-amontya."
 
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "Ny yllir ygeri an arayel vappaow (%s)!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Skrin leun / fenester"
+
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "Ny gavas arayel HOME (plethen gyrhynedhel $HOME)!"
 
 #~ msgid "Head commander:"
 #~ msgstr "Penn an para: "
+
+#~ msgid "Head commander: "
+#~ msgstr "Penn an para: "
+
+#, fuzzy
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Usyans : pesya gweskel war an alhwedhen spas\n"
+#~ "unn bellen orth an dro"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "Omjun gans #warmux war irc.freende.net rag kavos nebes eskerens."
 
 #~ msgid "Network initialization"
 #~ msgstr "Lonchyans an rosweyth"
@@ -2766,10 +2771,36 @@ msgstr "o Awdio ygerys orth %d Hz %d byt"
 #~ "kamm. Mar pleg assay omjunya dre dhorn."
 
 #, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Kasow poblek"
+
+#~ msgid "Quit battle"
+#~ msgstr "Kwitya an gas"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Nyns eus saw %i para."
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Chanjya ehen arv"
+
+#, fuzzy
 #~ msgid ""
 #~ "Sorry, your version is not supported anymore. Supported version are %s. "
 #~ "You can download a updated version on http://www.warmux.org/wiki/download."
 #~ "php"
+#~ msgstr ""
+#~ "Gav dhyn, mes ny skodhir dha versyon a'n gwari na fella. An versyonow "
+#~ "skodhysyw an versyons %s. Ty a yll iskarga versyon nowedhys war http://"
+#~ "www.warmux.org/wiki/download.php"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
 #~ msgstr ""
 #~ "Gav dhyn, mes ny skodhir dha versyon a'n gwari na fella. An versyonow "
 #~ "skodhysyw an versyons %s. Ty a yll iskarga versyon nowedhys war http://"
@@ -2783,3 +2814,9 @@ msgstr "o Awdio ygerys orth %d Hz %d byt"
 
 #~ msgid "Warn when a new player joins?"
 #~ msgstr "Gwarnya pan wra gwarier nowyth omjunya?"
+
+#~ msgid "You are alone..."
+#~ msgstr "Genes dha honan th esos..."
+
+#~ msgid "You are the new turn master!"
+#~ msgstr "Mester nowyth an dro os ta!"

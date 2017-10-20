@@ -594,9 +594,25 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Volver a la pelea"
 
+#. Data magic
+#: src/replay/replay_info.cpp:150
+#, c-format
+msgid "Bad data marker 0x%08X instead of 0x%08X"
+msgstr ""
+
+#: src/replay/replay_info.cpp:77
+#, c-format
+msgid "Bad header 0x%08X instead of 0x%08X"
+msgstr ""
+
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Socket malo..."
+
+#: src/replay/replay.cpp:257
+#, c-format
+msgid "Bad version: %s != %s"
+msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -629,10 +645,6 @@ msgstr "Bounce Ball"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Hasta luego tux..."
-
-#: lib/warmux/net/download.cpp:492
-msgid "Can't find authenticity_token"
-msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -827,10 +839,15 @@ msgstr "Construir"
 msgid "Controlled by: "
 msgstr "Controlado por: "
 
-#: lib/warmux/net/download.cpp:306
-#, c-format
-msgid "Couldn't fetch last version from %s"
-msgstr "No se ha podido volver a la versión %s"
+#: src/replay/replay.cpp:279
+#, fuzzy, c-format
+msgid "Couldn't find map %s"
+msgstr "¡Equipo %s no encontrado!"
+
+#: src/replay/replay.cpp:248
+#, fuzzy, c-format
+msgid "Couldn't open %s\n"
+msgstr "No se pudo abrir el archivo %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -934,6 +951,10 @@ msgstr "FIN DEL JUEGO"
 msgid "Effects volume"
 msgstr "Volumen de los efectos"
 
+#: src/replay/replay_info.cpp:136
+msgid "End of file while parsing teams"
+msgstr ""
+
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energia"
@@ -998,7 +1019,6 @@ msgid "Error: Unable to start the server"
 msgstr "Error: Imposible iniciar servidor"
 
 #: src/menu/network_connection_menu.cpp:523
-#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1121,7 +1141,6 @@ msgstr "Inicialización..."
 
 #: src/game/game_blitz.cpp:69
 #, fuzzy, c-format
-#| msgid "%s team was fragged down."
 msgid "Group %u was fragged down."
 msgstr "El equipo %s ha ganado."
 
@@ -1340,10 +1359,6 @@ msgstr "Carga los equipos:"
 msgid "Local teams:"
 msgstr "Equipos locales:"
 
-#: lib/warmux/net/download.cpp:424
-msgid "Login error, probably invalid email or password"
-msgstr ""
-
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1351,6 +1366,16 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Baja gravedad"
+
+#: src/replay/replay.cpp:374
+#, c-format
+msgid "Malformed replay: action with datasize=%u"
+msgstr ""
+
+#: src/replay/replay.cpp:366
+#, c-format
+msgid "Malformed replay: action with unknow type %08X"
+msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1534,6 +1559,11 @@ msgstr "¿Alarma de un nuevo jugador?"
 msgid "Next character"
 msgstr "Mover el personaje"
 
+#. Copy ?
+#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
+msgid "No comment."
+msgstr ""
+
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1542,10 +1572,6 @@ msgstr "¡Ningun elemento <%s> encontrado en el archivo de configuración xml!"
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Jugador no conectado"
-
-#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
-msgid "No pointer"
-msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1604,7 +1630,6 @@ msgstr ""
 
 #: src/gui/social_panel.cpp:81
 #, fuzzy
-#| msgid "Password:"
 msgid "Password"
 msgstr "Clave:"
 
@@ -1762,11 +1787,6 @@ msgstr ""
 msgid "Random map"
 msgstr "Mapa aleatorio"
 
-#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
-#, fuzzy, c-format
-msgid "Read only %i bytes"
-msgstr "Solo hay %i equipo."
-
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Leyendo fichero de configuración"
@@ -1831,7 +1851,6 @@ msgstr "Empieza el juego"
 #. Password
 #: src/gui/social_panel.cpp:76
 #, fuzzy
-#| msgid "Password:"
 msgid "Save password"
 msgstr "Clave:"
 
@@ -1962,16 +1981,6 @@ msgstr "¡Alguien puso una trampa explosiva camuflada en la caja!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Lo siento, actualmente, ningún juego está esperando a jugadores"
 
-#: tools/servers/game_server/server.cpp:386
-#, fuzzy, c-format
-msgid ""
-"Sorry, your version is not supported anymore. Supported versions are %s. You "
-"can download an updated version from http://www.warmux.org/wiki/download.php"
-msgstr ""
-"Lo sentimos, pero su versión no tiene soporte. La versión con soporte es %s. "
-"Puede descargar una versión actualizada en http://www.warmux.org/wiki/"
-"download.php"
-
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2014,6 +2023,11 @@ msgstr "Metralleta"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
+
+#: src/replay/replay_info.cpp:102
+#, c-format
+msgid "Suspicious number of teams 0x%08X"
+msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2164,8 +2178,6 @@ msgstr ""
 
 #: src/menu/game_menu.cpp:128 src/menu/network_menu.cpp:254
 #, fuzzy, c-format
-#| msgid "There is only %i team."
-#| msgid_plural "There are only %i teams."
 msgid "There is only %u team."
 msgid_plural "There are only %u teams."
 msgstr[0] "Solo hay %i equipo."
@@ -2296,9 +2308,18 @@ msgstr "Comando desconocido"
 msgid "Unknown command of type %i"
 msgstr "Comando desconocido"
 
+#: src/replay/replay_info.cpp:60
+#, fuzzy
+msgid "Unknown."
+msgstr "Comando desconocido"
+
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Ilimitado"
+
+#: src/replay/replay_info.cpp:70
+msgid "Unspecified error or end of file"
+msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2387,6 +2408,11 @@ msgstr "Arrancando Warmux..."
 msgid "Warmux version "
 msgstr "Versión de Warmux"
 
+#: src/replay/replay.cpp:265
+#, c-format
+msgid "Warning, malformed replay with data of size %u"
+msgstr ""
+
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2447,7 +2473,6 @@ msgstr "Ganador"
 
 #: src/menu/game_mode_editor.cpp:116
 #, fuzzy
-#| msgid "Wrong team!"
 msgid "Within team"
 msgstr "¡Equipo incorrecto!"
 
@@ -2468,11 +2493,6 @@ msgstr "¡Nombre de mapa incorrecto!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "¡Equipo incorrecto!"
-
-#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
-#, c-format
-msgid "Wrote %i/%i bytes"
-msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 msgid "You are alone. :-/"
@@ -2560,67 +2580,6 @@ msgstr "o Cargando perfil de sonido: %s"
 #, c-format
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Abierto audio a %d Hz %d bit"
-
-#, fuzzy
-#~| msgid "Public battles"
-#~ msgid "Publish updates"
-#~ msgstr "Batallas publicas"
-
-#, fuzzy
-#~ msgid "Fail to open temporary file: %s"
-#~ msgstr "¡Imposible abrir el directorio de los mapas (%s)!"
-
-#~ msgid "You are the new turn master!"
-#~ msgstr "¡Eres el nuevo dueño del turno!"
-
-#, fuzzy
-#~| msgid "Find a random position for characters"
-#~ msgid "Position of the other characters"
-#~ msgstr "Colocacion aleatoria de personajes"
-
-#, fuzzy
-#~ msgid "Selected weapon and ammo left"
-#~ msgstr "Cambia la categoría de arma"
-
-#, fuzzy
-#~ msgid "Change per team number of players"
-#~ msgstr "Numero de jugadores por equipo:"
-
-#, fuzzy
-#~ msgid "Edit player name"
-#~ msgstr "Nombre del jugador"
-
-#~ msgid "Fullscreen / window"
-#~ msgstr "Pantalla completa / ventana"
-
-#~ msgid "Quit battle"
-#~ msgstr "Salir de la batalla"
-
-#~ msgid "You are alone..."
-#~ msgstr "Estás solo..."
-
-#~ msgid ""
-#~ "How to use it : keep the space key pressed\n"
-#~ "an ammo per turn"
-#~ msgstr ""
-#~ "Como usarlo: mantén pulsado la barra espaciadora\n"
-#~ "un arma por turno"
-
-#~ msgid "Head commander: "
-#~ msgstr "Comandante jefe: "
-
-#~ msgid "Click: Center the camera on the character"
-#~ msgstr "Click: Centra la cámara al personaje"
-
-#~ msgid ""
-#~ "Error:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Error:\n"
-#~ "%s"
-
-#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
-#~ msgstr "Entra en #warmux en irc.freenode.net para encontrar algún oponente."
 
 #~ msgid "  Most sold-out  :  "
 #~ msgstr " El más traidor  :  %s (%i).\n"
@@ -2715,17 +2674,27 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #~ msgid "C++ exception caught:"
 #~ msgstr "Excepcion C++ interceptada:"
 
+#, fuzzy
+#~ msgid "Change per team number of players"
+#~ msgstr "Numero de jugadores por equipo:"
+
 #~ msgid "ClanLib error :"
 #~ msgstr "Error ClanLib :"
 
 #~ msgid "ClanLib error during loading map '%s' :"
 #~ msgstr "ClanLib error durante la carga del mapa '%s' :"
 
+#~ msgid "Click: Center the camera on the character"
+#~ msgstr "Click: Centra la cámara al personaje"
+
 #~ msgid "Connect !"
 #~ msgstr "¡Conexión!"
 
 #~ msgid "Connect to an internet game"
 #~ msgstr "Conectado a una partida en internet"
+
+#~ msgid "Couldn't fetch last version from %s"
+#~ msgstr "No se ha podido volver a la versión %s"
 
 #~ msgid "Delete custom team"
 #~ msgstr "Eliminar el equipo personalizado"
@@ -2735,6 +2704,10 @@ msgstr "o Abierto audio a %d Hz %d bit"
 
 #~ msgid "Duration of the end of a turn:"
 #~ msgstr "Duración de fin de turno:"
+
+#, fuzzy
+#~ msgid "Edit player name"
+#~ msgstr "Nombre del jugador"
 
 #~ msgid "End of the game!\n"
 #~ msgstr "¡Final de la partida!\n"
@@ -2761,6 +2734,13 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #~ msgstr "Error cargando el modo de juego %s de la memoria :"
 
 #~ msgid ""
+#~ "Error:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Error:\n"
+#~ "%s"
+
+#~ msgid ""
 #~ "Error: Your server is not reachable from the internet. Check your "
 #~ "firewall configuration"
 #~ msgstr ""
@@ -2780,8 +2760,15 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #~ "configuración de tu router: Puerto TCP %s debe ser dirigido a tu "
 #~ "ordenador."
 
+#, fuzzy
+#~ msgid "Fail to open temporary file: %s"
+#~ msgstr "¡Imposible abrir el directorio de los mapas (%s)!"
+
 #~ msgid "Failed to initialize network library!"
 #~ msgstr "Fallo al inicializar biblioteca de red!"
+
+#~ msgid "Fullscreen / window"
+#~ msgstr "Pantalla completa / ventana"
 
 #~ msgid "HOME directory (environment variable $HOME) could not be found!"
 #~ msgstr "¡El directorio HOME (la variable de entorno $HOME) no se encuentra!"
@@ -2789,6 +2776,16 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #, fuzzy
 #~ msgid "Head commander:"
 #~ msgstr "Comandante jefe: "
+
+#~ msgid "Head commander: "
+#~ msgstr "Comandante jefe: "
+
+#~ msgid ""
+#~ "How to use it : keep the space key pressed\n"
+#~ "an ammo per turn"
+#~ msgstr ""
+#~ "Como usarlo: mantén pulsado la barra espaciadora\n"
+#~ "un arma por turno"
 
 #~ msgid "Info"
 #~ msgstr "Información"
@@ -2798,6 +2795,9 @@ msgstr "o Abierto audio a %d Hz %d bit"
 
 #~ msgid "Is it a gift?"
 #~ msgstr "¿Es un regalo?"
+
+#~ msgid "Join #warmux on irc.freenode.net to find some opponents."
+#~ msgstr "Entra en #warmux en irc.freenode.net para encontrar algún oponente."
 
 #~ msgid "Load game data..."
 #~ msgstr "Cargando los datos del juego..."
@@ -2824,11 +2824,32 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #~ msgid "Please tell us your opinion of Warmux via email:"
 #~ msgstr "Por favor danos tu opinión de Warmux por correo electrónico:"
 
+#, fuzzy
+#~| msgid "Find a random position for characters"
+#~ msgid "Position of the other characters"
+#~ msgstr "Colocacion aleatoria de personajes"
+
+#, fuzzy
+#~| msgid "Public battles"
+#~ msgid "Publish updates"
+#~ msgstr "Batallas publicas"
+
+#~ msgid "Quit battle"
+#~ msgstr "Salir de la batalla"
+
+#, fuzzy
+#~ msgid "Read only %i bytes"
+#~ msgstr "Solo hay %i equipo."
+
 #~ msgid "Refresh"
 #~ msgstr "Actualizar"
 
 #~ msgid "Riot bomb"
 #~ msgstr "Bazooka automático"
+
+#, fuzzy
+#~ msgid "Selected weapon and ammo left"
+#~ msgstr "Cambia la categoría de arma"
 
 #~ msgid ""
 #~ "Some weapons are disabled, because of known bugs (grapple, airhammer, "
@@ -2843,6 +2864,16 @@ msgstr "o Abierto audio a %d Hz %d bit"
 #~ "Sorry, your version is not supported anymore. Supported version are %s. "
 #~ "You can download a updated version on http://www.warmux.org/wiki/download."
 #~ "php"
+#~ msgstr ""
+#~ "Lo sentimos, pero su versión no tiene soporte. La versión con soporte es "
+#~ "%s. Puede descargar una versión actualizada en http://www.warmux.org/wiki/"
+#~ "download.php"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
+#~ "You can download an updated version from http://www.warmux.org/wiki/"
+#~ "download.php"
 #~ msgstr ""
 #~ "Lo sentimos, pero su versión no tiene soporte. La versión con soporte es "
 #~ "%s. Puede descargar una versión actualizada en http://www.warmux.org/wiki/"
@@ -2903,6 +2934,12 @@ msgstr "o Abierto audio a %d Hz %d bit"
 
 #~ msgid "XML error during loading map '%s': "
 #~ msgstr "Error XML durante la carga del mapa '%s':"
+
+#~ msgid "You are alone..."
+#~ msgstr "Estás solo..."
+
+#~ msgid "You are the new turn master!"
+#~ msgstr "¡Eres el nuevo dueño del turno!"
 
 #~ msgid "You need at least two teams to play: change this in 'Options menu' !"
 #~ msgstr ""
