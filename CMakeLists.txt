@@ -215,7 +215,7 @@ INSTALL(DIRECTORY data/ DESTINATION ${DATA_DESTINATION}
 # Install desktop file and icon
 IF(UNIX AND NOT APPLE)
   INSTALL(FILES data/warmux.desktop DESTINATION share/applications)
-  INSTALL(FILES data/warmux_128x128.png DESTINATION share/pixmaps)
+  INSTALL(FILES data/icon/warmux_128x128.png DESTINATION share/pixmaps)
 ENDIF(UNIX AND NOT APPLE)
 
 # Install docs
