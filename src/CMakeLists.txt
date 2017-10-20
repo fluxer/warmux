@@ -7,8 +7,17 @@ IF(NOT WIN32 AND NOT MSYS)
                                      ${CMAKE_CURRENT_SOURCE_DIR}/msvc/getopt.h
         )
 ENDIF(NOT WIN32 AND NOT MSYS)
-LIST(REMOVE_ITEM WARMUX_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/maemo/osso.cpp
-                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/osso.h)
+# TODO: support Maemo
+LIST(REMOVE_ITEM WARMUX_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/maemo/conic.cpp
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/conic.h
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/glib.cpp
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/glib.h
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/maemo.cpp
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/maemo.h
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/osso.cpp
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/osso.h
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/resource.cpp
+                             ${CMAKE_CURRENT_SOURCE_DIR}/maemo/resource.h)
 SET(WARMUX_SRCS ${WARMUX_SRCS} PARENT_SCOPE)
 
 INCLUDE_DIRECTORIES(
@@ -39,7 +48,7 @@ TARGET_LINK_LIBRARIES( ${EXECUTABLE}
 
 IF (FRIBIDI_FOUND)
 TARGET_LINK_LIBRARIES( ${EXECUTABLE}
-        ${FRIBIDI_LIBRARY}
+        ${FRIBIDI_LIBRARIES}
 )
 ENDIF (FRIBIDI_FOUND)
 
