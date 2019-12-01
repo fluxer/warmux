@@ -209,7 +209,6 @@ INSTALL(DIRECTORY data/ DESTINATION ${DATA_DESTINATION}
   PATTERN ".svn" EXCLUDE
   PATTERN "Makefile*" EXCLUDE
   PATTERN "warmux.desktop" EXCLUDE
-  PATTERN "*.dtd" EXCLUDE
 )
 
 # Install desktop file and icon
