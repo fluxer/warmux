@@ -603,25 +603,9 @@ msgstr "Άλμα προς τα πίσω"
 msgid "Back to battle"
 msgstr "Πίσω στη μάχη"
 
-#. Data magic
-#: src/replay/replay_info.cpp:150
-#, c-format
-msgid "Bad data marker 0x%08X instead of 0x%08X"
-msgstr ""
-
-#: src/replay/replay_info.cpp:77
-#, c-format
-msgid "Bad header 0x%08X instead of 0x%08X"
-msgstr ""
-
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Λανθασμένη θυρίδα..."
-
-#: src/replay/replay.cpp:257
-#, c-format
-msgid "Bad version: %s != %s"
-msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -655,6 +639,10 @@ msgstr "Μπάλα Αναπήδησης"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Άντε γεια tux..."
+
+#: lib/warmux/net/download.cpp:492
+msgid "Can't find authenticity_token"
+msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -858,15 +846,10 @@ msgstr "Κατασκευή"
 msgid "Controlled by: "
 msgstr "Ελεγχόμενος από:"
 
-#: src/replay/replay.cpp:279
-#, fuzzy, c-format
-msgid "Couldn't find map %s"
-msgstr "Αδύνατον να βρεθεί η ομάδα %s!"
-
-#: src/replay/replay.cpp:248
-#, fuzzy, c-format
-msgid "Couldn't open %s\n"
-msgstr "Αδύνατον να ανοίξει το αρχείο %s"
+#: lib/warmux/net/download.cpp:306
+#, c-format
+msgid "Couldn't fetch last version from %s"
+msgstr "Δεν μπόρεσε να πάρει την τελευταία έκδοση από τον %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -973,10 +956,6 @@ msgstr "ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ"
 msgid "Effects volume"
 msgstr "Ένταση ηχητικών εφέ"
 
-#: src/replay/replay_info.cpp:136
-msgid "End of file while parsing teams"
-msgstr ""
-
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Ενέργεια"
@@ -1044,6 +1023,7 @@ msgstr "Αδύνατη η έναρξη του διακομιστή."
 
 # Erreur : Votre serveur n'est pas accessible depuis Internet. Vérifier la configuration de votre firewall : le port TCP %s doit accepter les connexions extérieures. Si vous n'êtes pas directement connecté à Internet, vérifier la configuration de votre routeur : le port TCP %s doit être redirigé vers votre ordinateur.
 #: src/menu/network_connection_menu.cpp:523
+#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1387,6 +1367,10 @@ msgstr "Φόρτωση ομάδων:"
 msgid "Local teams:"
 msgstr "Ομάδες τοπικά:"
 
+#: lib/warmux/net/download.cpp:424
+msgid "Login error, probably invalid email or password"
+msgstr ""
+
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr "Χαμηλή μνήμη"
@@ -1394,16 +1378,6 @@ msgstr "Χαμηλή μνήμη"
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Αντιβαρύτητα"
-
-#: src/replay/replay.cpp:374
-#, c-format
-msgid "Malformed replay: action with datasize=%u"
-msgstr ""
-
-#: src/replay/replay.cpp:366
-#, c-format
-msgid "Malformed replay: action with unknow type %08X"
-msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1579,12 +1553,6 @@ msgstr "Προειδοποίηση νέου παίκτη;"
 msgid "Next character"
 msgstr "Επόμενος χαρακτήρας"
 
-#. Copy ?
-#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
-#, fuzzy
-msgid "No comment."
-msgstr "Σχόλιο"
-
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1593,6 +1561,10 @@ msgstr "Κανένα στοιχείο <%s> δεν βρέθηκε στο αρχε
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Κανένας παίκτης συνδεδεμένος"
+
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
+msgid "No pointer"
+msgstr "Όχι δείκτης"
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1831,6 +1803,12 @@ msgstr "Αυτόματο"
 msgid "Random map"
 msgstr "Τυχαίος χάρτης"
 
+# Il n'y a que %i équipe.
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
+#, c-format
+msgid "Read only %i bytes"
+msgstr "Διάβασε μόνο %i bytes"
+
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Ανάγνωση προκαθορισμένου αρχείου διαμόρφωσης"
@@ -2033,6 +2011,16 @@ msgstr "Κάποιος παγίδευσε το κιβώτιο!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Συγγνώμη, δεν υπάρχει κανένα παιχνίδι να περιμένει παίκτες"
 
+#: tools/servers/game_server/server.cpp:386
+#, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Συγγνώμη,  η έκδοσή σας δεν υποστηρίζεται τώρα. Οι υποστηριζόμενες εκδόσεις "
+"είναι οι %s. Μπορείτε να κατεβάσετε μία ενημερωμένη έκδοση στο  http://www."
+"warmux.org/wiki/download.php"
+
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2075,11 +2063,6 @@ msgstr "Οπλοπολυβόλο"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "Υπέρ-Tux"
-
-#: src/replay/replay_info.cpp:102
-#, c-format
-msgid "Suspicious number of teams 0x%08X"
-msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2367,18 +2350,9 @@ msgstr "Άγνωστη εντολή"
 msgid "Unknown command of type %i"
 msgstr "Άγνωστη εντολή τύπου %i "
 
-#: src/replay/replay_info.cpp:60
-#, fuzzy
-msgid "Unknown."
-msgstr "Άγνωστη εντολή"
-
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Απεριόριστο"
-
-#: src/replay/replay_info.cpp:70
-msgid "Unspecified error or end of file"
-msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2469,11 +2443,6 @@ msgstr "Έναρξη του Warmux..."
 msgid "Warmux version "
 msgstr "Έκδοση του Warmux"
 
-#: src/replay/replay.cpp:265
-#, c-format
-msgid "Warning, malformed replay with data of size %u"
-msgstr ""
-
 #: src/interface/man_machine_interface.cpp:1152
 msgid "Weapon category 8"
 msgstr "Κατηγορία όπλου 8"
@@ -2554,6 +2523,11 @@ msgstr "Λάθος όνομα χάρτη!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Λάθος ομάδα!"
+
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
+#, c-format
+msgid "Wrote %i/%i bytes"
+msgstr "Γράφτηκαν %i/%i bytes"
 
 # T'es tout seul :-/
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2645,6 +2619,22 @@ msgstr "o Φόρτωση ηχητικού προφίλ: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 
+#, fuzzy
+#~ msgid "Couldn't find map %s"
+#~ msgstr "Αδύνατον να βρεθεί η ομάδα %s!"
+
+#, fuzzy
+#~ msgid "Couldn't open %s\n"
+#~ msgstr "Αδύνατον να ανοίξει το αρχείο %s"
+
+#, fuzzy
+#~ msgid "No comment."
+#~ msgstr "Σχόλιο"
+
+#, fuzzy
+#~ msgid "Unknown."
+#~ msgstr "Άγνωστη εντολή"
+
 #~ msgid "%s has decided to injure %s"
 #~ msgstr "Ο %s αποφάσισε να τραυματίσει τον %s"
 
@@ -2664,9 +2654,6 @@ msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 
 #~ msgid "Click: Center the camera on the character"
 #~ msgstr "Κλικ: Κέντραρε την κάμερα στο χαρακτήρα σου"
-
-#~ msgid "Couldn't fetch last version from %s"
-#~ msgstr "Δεν μπόρεσε να πάρει την τελευταία έκδοση από τον %s"
 
 #~ msgid "Delete custom team"
 #~ msgstr "Διάγραψε προσωπική ομάδα."
@@ -2741,9 +2728,6 @@ msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 #~ msgid "Network initialization"
 #~ msgstr "Αρχικοποίηση Δικτύου"
 
-#~ msgid "No pointer"
-#~ msgstr "Όχι δείκτης"
-
 #, fuzzy
 #~ msgid ""
 #~ "No public servers available and incorrect manual connection settings. Try "
@@ -2760,10 +2744,6 @@ msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 #~ msgid "Quit battle"
 #~ msgstr "Εγκατάλειψε τη μάχη"
 
-# Il n'y a que %i équipe.
-#~ msgid "Read only %i bytes"
-#~ msgstr "Διάβασε μόνο %i bytes"
-
 #, fuzzy
 #~ msgid "Selected weapon and ammo left"
 #~ msgstr "Αλλαγή κατηγορίας όπλου"
@@ -2778,15 +2758,6 @@ msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 #~ "εκδόσεις είναι οι %s. Μπορείτε να κατεβάσετε μία ενημερωμένη έκδοση στο  "
 #~ "http://www.warmux.org/wiki/download.php"
 
-#~ msgid ""
-#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
-#~ "You can download an updated version from http://www.warmux.org/wiki/"
-#~ "download.php"
-#~ msgstr ""
-#~ "Συγγνώμη,  η έκδοσή σας δεν υποστηρίζεται τώρα. Οι υποστηριζόμενες "
-#~ "εκδόσεις είναι οι %s. Μπορείτε να κατεβάσετε μία ενημερωμένη έκδοση στο  "
-#~ "http://www.warmux.org/wiki/download.php"
-
 #~ msgid "Tools"
 #~ msgstr "Εργαλεία"
 
@@ -2795,9 +2766,6 @@ msgstr "o Άνοιγμα ήχου στα %d Hz %d bit"
 
 #~ msgid "Warn when a new player joins?"
 #~ msgstr "Prévenir lorsqu'un nouveau joueur arrive?"
-
-#~ msgid "Wrote %i/%i bytes"
-#~ msgstr "Γράφτηκαν %i/%i bytes"
 
 #~ msgid "You are alone..."
 #~ msgstr "Θέλετε σίγουρα να παίξετε μόνος σας;!"

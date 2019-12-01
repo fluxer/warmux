@@ -577,25 +577,9 @@ msgstr "Hop tilbage"
 msgid "Back to battle"
 msgstr "Tilbage til kampen"
 
-#. Data magic
-#: src/replay/replay_info.cpp:150
-#, c-format
-msgid "Bad data marker 0x%08X instead of 0x%08X"
-msgstr ""
-
-#: src/replay/replay_info.cpp:77
-#, c-format
-msgid "Bad header 0x%08X instead of 0x%08X"
-msgstr ""
-
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Dårlig socket..."
-
-#: src/replay/replay.cpp:257
-#, c-format
-msgid "Bad version: %s != %s"
-msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -628,6 +612,10 @@ msgstr "Hoppebold"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Faaarvel Tux..."
+
+#: lib/warmux/net/download.cpp:492
+msgid "Can't find authenticity_token"
+msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -829,15 +817,10 @@ msgstr "Konstruér"
 msgid "Controlled by: "
 msgstr "Kontrolleret af: "
 
-#: src/replay/replay.cpp:279
-#, fuzzy, c-format
-msgid "Couldn't find map %s"
-msgstr "Kan ikke finde holdet %s!"
-
-#: src/replay/replay.cpp:248
-#, fuzzy, c-format
-msgid "Couldn't open %s\n"
-msgstr "Kunne ikke åbne filen %s"
+#: lib/warmux/net/download.cpp:306
+#, c-format
+msgid "Couldn't fetch last version from %s"
+msgstr "Kunne ikke checkke efter ny version på %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -944,10 +927,6 @@ msgstr "SLUT PÅ SPILLET"
 msgid "Effects volume"
 msgstr "Lydeffekt volume"
 
-#: src/replay/replay_info.cpp:136
-msgid "End of file while parsing teams"
-msgstr ""
-
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energi"
@@ -1009,6 +988,7 @@ msgid "Error: Unable to start the server"
 msgstr "Fejl: Kan ikke starte server"
 
 #: src/menu/network_connection_menu.cpp:523
+#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1351,6 +1331,10 @@ msgstr "Indlæser hold:"
 msgid "Local teams:"
 msgstr "Lokale hold:"
 
+#: lib/warmux/net/download.cpp:424
+msgid "Login error, probably invalid email or password"
+msgstr ""
+
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr "Lidt hukommelse"
@@ -1358,16 +1342,6 @@ msgstr "Lidt hukommelse"
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Svag tyngdekraft"
-
-#: src/replay/replay.cpp:374
-#, c-format
-msgid "Malformed replay: action with datasize=%u"
-msgstr ""
-
-#: src/replay/replay.cpp:366
-#, c-format
-msgid "Malformed replay: action with unknow type %08X"
-msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1543,12 +1517,6 @@ msgstr "Ny spiller notifikation?"
 msgid "Next character"
 msgstr "Næste kriger"
 
-#. Copy ?
-#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
-#, fuzzy
-msgid "No comment."
-msgstr "Kommentar:"
-
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1557,6 +1525,10 @@ msgstr "Intet <%s> element fundet i XML-konfigurationsfilen!"
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Ingen spillere forbundet"
+
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
+msgid "No pointer"
+msgstr "Ingen markør"
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1789,6 +1761,11 @@ msgstr "Magnetisk gevær"
 msgid "Random map"
 msgstr "Tilfældig bane"
 
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
+#, c-format
+msgid "Read only %i bytes"
+msgstr "Læs kun %i bytes"
+
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Læser standard konfigureringsfil"
@@ -1989,6 +1966,16 @@ msgstr "Nogen har puttet en fælde i kassen!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Desværre, men der er ingen tilgængelige spil som venter på spillere"
 
+#: tools/servers/game_server/server.cpp:386
+#, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Desværre, men din version er ikke understøttet mere. Den nyeste "
+"understøttede version er %s. Du kan downloade en opdateret version af Warmux "
+"på http://www.warmux.org/wiki/download.php"
+
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2031,11 +2018,6 @@ msgstr "Maskinpistol"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
-
-#: src/replay/replay_info.cpp:102
-#, c-format
-msgid "Suspicious number of teams 0x%08X"
-msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2313,18 +2295,9 @@ msgstr "Ukendt kommando"
 msgid "Unknown command of type %i"
 msgstr "Ukendt kommando af typen %i"
 
-#: src/replay/replay_info.cpp:60
-#, fuzzy
-msgid "Unknown."
-msgstr "Ukendt kommando"
-
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Ubegrænset"
-
-#: src/replay/replay_info.cpp:70
-msgid "Unspecified error or end of file"
-msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2412,11 +2385,6 @@ msgstr "Warmux starter..."
 msgid "Warmux version "
 msgstr "Warmux version "
 
-#: src/replay/replay.cpp:265
-#, c-format
-msgid "Warning, malformed replay with data of size %u"
-msgstr ""
-
 #: src/interface/man_machine_interface.cpp:1152
 msgid "Weapon category 8"
 msgstr "Våbenkategori 8"
@@ -2494,6 +2462,11 @@ msgstr "Ugyldigt banenavn!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Ugyldigt hold!"
+
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
+#, c-format
+msgid "Wrote %i/%i bytes"
+msgstr "Skrev %i/%i bytes"
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 msgid "You are alone. :-/"
@@ -2581,6 +2554,22 @@ msgstr "o Indlæser lydprofilen: %s"
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Åbnede lydenheden ved %d Hz og %d bit"
 
+#, fuzzy
+#~ msgid "Couldn't find map %s"
+#~ msgstr "Kan ikke finde holdet %s!"
+
+#, fuzzy
+#~ msgid "Couldn't open %s\n"
+#~ msgstr "Kunne ikke åbne filen %s"
+
+#, fuzzy
+#~ msgid "No comment."
+#~ msgstr "Kommentar:"
+
+#, fuzzy
+#~ msgid "Unknown."
+#~ msgstr "Ukendt kommando"
+
 #~ msgid "%s has decided to injure %s"
 #~ msgstr "%s besluttede sig for at skade %s"
 
@@ -2597,9 +2586,6 @@ msgstr "o Åbnede lydenheden ved %d Hz og %d bit"
 #, fuzzy
 #~ msgid "Click: Center the camera on the character"
 #~ msgstr "Klik: Centrér kamera på kriger"
-
-#~ msgid "Couldn't fetch last version from %s"
-#~ msgstr "Kunne ikke checkke efter ny version på %s"
 
 #~ msgid "Delete custom team"
 #~ msgstr "Slet brugerdefineret hold"
@@ -2663,9 +2649,6 @@ msgstr "o Åbnede lydenheden ved %d Hz og %d bit"
 #~ msgid "Network initialization"
 #~ msgstr "Netværksinitialisation"
 
-#~ msgid "No pointer"
-#~ msgstr "Ingen markør"
-
 #, fuzzy
 #~| msgid "Public battles"
 #~ msgid "Publish updates"
@@ -2673,9 +2656,6 @@ msgstr "o Åbnede lydenheden ved %d Hz og %d bit"
 
 #~ msgid "Quit battle"
 #~ msgstr "Forlad kampen"
-
-#~ msgid "Read only %i bytes"
-#~ msgstr "Læs kun %i bytes"
 
 #, fuzzy
 #~ msgid "Selected weapon and ammo left"
@@ -2691,23 +2671,11 @@ msgstr "o Åbnede lydenheden ved %d Hz og %d bit"
 #~ "version er %s. Du kan downloade en opdateret version af Warmux på http://"
 #~ "www.warmux.org/wiki/download.php"
 
-#~ msgid ""
-#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
-#~ "You can download an updated version from http://www.warmux.org/wiki/"
-#~ "download.php"
-#~ msgstr ""
-#~ "Desværre, men din version er ikke understøttet mere. Den nyeste "
-#~ "understøttede version er %s. Du kan downloade en opdateret version af "
-#~ "Warmux på http://www.warmux.org/wiki/download.php"
-
 #~ msgid "Tools"
 #~ msgstr "Værktøj"
 
 #~ msgid "Unnamed"
 #~ msgstr "Unavngivet"
-
-#~ msgid "Wrote %i/%i bytes"
-#~ msgstr "Skrev %i/%i bytes"
 
 #~ msgid "You are alone..."
 #~ msgstr "Du er alene..."

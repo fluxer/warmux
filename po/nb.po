@@ -587,25 +587,9 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Tilbake til slaget"
 
-#. Data magic
-#: src/replay/replay_info.cpp:150
-#, c-format
-msgid "Bad data marker 0x%08X instead of 0x%08X"
-msgstr ""
-
-#: src/replay/replay_info.cpp:77
-#, c-format
-msgid "Bad header 0x%08X instead of 0x%08X"
-msgstr ""
-
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Dårlig tilkobling"
-
-#: src/replay/replay.cpp:257
-#, c-format
-msgid "Bad version: %s != %s"
-msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -640,6 +624,10 @@ msgstr "Sprettball"
 #, fuzzy
 msgid "Bye bye Tux..."
 msgstr "Hadé tux!!"
+
+#: lib/warmux/net/download.cpp:492
+msgid "Can't find authenticity_token"
+msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -836,15 +824,10 @@ msgstr "Konstruer"
 msgid "Controlled by: "
 msgstr "Kontrollert av: "
 
-#: src/replay/replay.cpp:279
-#, fuzzy, c-format
-msgid "Couldn't find map %s"
-msgstr "Kan ikke finne %s-laget !"
-
-#: src/replay/replay.cpp:248
-#, fuzzy, c-format
-msgid "Couldn't open %s\n"
-msgstr "Kunne ikke laste filen %s"
+#: lib/warmux/net/download.cpp:306
+#, c-format
+msgid "Couldn't fetch last version from %s"
+msgstr "Kunne ikke hente siste versjon fra %s"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -947,10 +930,6 @@ msgstr "Spillet er slutt"
 msgid "Effects volume"
 msgstr "Effektsvolum"
 
-#: src/replay/replay_info.cpp:136
-msgid "End of file while parsing teams"
-msgstr ""
-
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Liv"
@@ -1015,6 +994,7 @@ msgid "Error: Unable to start the server"
 msgstr "Start av tjener feilet"
 
 #: src/menu/network_connection_menu.cpp:523
+#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1348,6 +1328,10 @@ msgstr "Last lagene :"
 msgid "Local teams:"
 msgstr "Lokale lag :"
 
+#: lib/warmux/net/download.cpp:424
+msgid "Login error, probably invalid email or password"
+msgstr ""
+
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1355,16 +1339,6 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "Lav tyngdekraft"
-
-#: src/replay/replay.cpp:374
-#, c-format
-msgid "Malformed replay: action with datasize=%u"
-msgstr ""
-
-#: src/replay/replay.cpp:366
-#, c-format
-msgid "Malformed replay: action with unknow type %08X"
-msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1550,11 +1524,6 @@ msgstr ""
 msgid "Next character"
 msgstr "Fallskjerm"
 
-#. Copy ?
-#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
-msgid "No comment."
-msgstr ""
-
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1564,6 +1533,10 @@ msgstr "Ikke noe element <%s> kunne bli funnet i konfigurasjonsfilet for XML !"
 #, fuzzy
 msgid "No player connected"
 msgstr "%i spiller tilkoblet"
+
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
+msgid "No pointer"
+msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1778,6 +1751,11 @@ msgstr ""
 msgid "Random map"
 msgstr "Tilfeldig kart"
 
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
+#, fuzzy, c-format
+msgid "Read only %i bytes"
+msgstr "Det er i øyeblikket %i lag."
+
 #: src/game/config.cpp:409
 #, fuzzy
 msgid "Reading the default config file"
@@ -1971,6 +1949,13 @@ msgstr "Noen har plassert en felle i krateret!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Beklager, for øyeblikket er det ingen spill som venter på spillere"
 
+#: tools/servers/game_server/server.cpp:386
+#, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+
 #: src/menu/network_connection_menu.cpp:472
 #, c-format
 msgid ""
@@ -2010,11 +1995,6 @@ msgstr "Mitraljøse"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
-
-#: src/replay/replay_info.cpp:102
-#, c-format
-msgid "Suspicious number of teams 0x%08X"
-msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2294,19 +2274,10 @@ msgstr "Ukjent kommando"
 msgid "Unknown command of type %i"
 msgstr "Ukjent kommando"
 
-#: src/replay/replay_info.cpp:60
-#, fuzzy
-msgid "Unknown."
-msgstr "Ukjent kommando"
-
 #: src/game/game_mode.cpp:316
 #, fuzzy
 msgid "Unlimited"
 msgstr "(uendelig)"
-
-#: src/replay/replay_info.cpp:70
-msgid "Unspecified error or end of file"
-msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2391,11 +2362,6 @@ msgstr "Laster Warmux ..."
 msgid "Warmux version "
 msgstr "Warmux versjon "
 
-#: src/replay/replay.cpp:265
-#, c-format
-msgid "Warning, malformed replay with data of size %u"
-msgstr ""
-
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2470,6 +2436,11 @@ msgstr ""
 
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
+msgstr ""
+
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
+#, c-format
+msgid "Wrote %i/%i bytes"
 msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
@@ -2562,6 +2533,18 @@ msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Åpnet lydfilen på %d Hz %d bit"
 
 #, fuzzy
+#~ msgid "Couldn't find map %s"
+#~ msgstr "Kan ikke finne %s-laget !"
+
+#, fuzzy
+#~ msgid "Couldn't open %s\n"
+#~ msgstr "Kunne ikke laste filen %s"
+
+#, fuzzy
+#~ msgid "Unknown."
+#~ msgstr "Ukjent kommando"
+
+#, fuzzy
 #~ msgid "Change per team number of players"
 #~ msgstr "Maksimalt antall deltagere :"
 
@@ -2574,9 +2557,6 @@ msgstr "o Åpnet lydfilen på %d Hz %d bit"
 
 #~ msgid "Connect to an internet game"
 #~ msgstr "Koble til et internetspill"
-
-#~ msgid "Couldn't fetch last version from %s"
-#~ msgstr "Kunne ikke hente siste versjon fra %s"
 
 #, fuzzy
 #~ msgid "Edit player name"
@@ -2637,10 +2617,6 @@ msgstr "o Åpnet lydfilen på %d Hz %d bit"
 
 #~ msgid "Quit battle"
 #~ msgstr "Forlat slaget"
-
-#, fuzzy
-#~ msgid "Read only %i bytes"
-#~ msgstr "Det er i øyeblikket %i lag."
 
 #~ msgid "Refresh"
 #~ msgstr "Oppdater"

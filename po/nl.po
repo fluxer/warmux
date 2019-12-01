@@ -608,25 +608,9 @@ msgstr ""
 msgid "Back to battle"
 msgstr "Terug"
 
-#. Data magic
-#: src/replay/replay_info.cpp:150
-#, c-format
-msgid "Bad data marker 0x%08X instead of 0x%08X"
-msgstr ""
-
-#: src/replay/replay_info.cpp:77
-#, c-format
-msgid "Bad header 0x%08X instead of 0x%08X"
-msgstr ""
-
 #: src/network/net_error_msg.cpp:32
 msgid "Bad socket ..."
 msgstr "Foute socket ..."
-
-#: src/replay/replay.cpp:257
-#, c-format
-msgid "Bad version: %s != %s"
-msgstr ""
 
 #: src/weapon/baseball.cpp:54
 msgid "Baseball Bat"
@@ -659,6 +643,10 @@ msgstr "Stuiterbal"
 #: src/weapon/supertux.cpp:177
 msgid "Bye bye Tux..."
 msgstr "Dag dag tux..."
+
+#: lib/warmux/net/download.cpp:492
+msgid "Can't find authenticity_token"
+msgstr ""
 
 #: src/team/teams_list.cpp:489 src/team/teams_list.cpp:525
 #: src/team/teams_list.cpp:534 src/team/teams_list.cpp:540
@@ -853,15 +841,10 @@ msgstr "Bouw"
 msgid "Controlled by: "
 msgstr "Bestuurd door: "
 
-#: src/replay/replay.cpp:279
-#, fuzzy, c-format
-msgid "Couldn't find map %s"
-msgstr "Kan team %s niet vinden!"
-
-#: src/replay/replay.cpp:248
-#, fuzzy, c-format
-msgid "Couldn't open %s\n"
-msgstr "Kon bestand %s niet openen"
+#: lib/warmux/net/download.cpp:306
+#, c-format
+msgid "Couldn't fetch last version from %s"
+msgstr "Kon de laatste versie van %s niet verwerven"
 
 #: src/network/chatlogger.cpp:52
 #, c-format
@@ -965,10 +948,6 @@ msgstr "EINDE VAN HET SPEL"
 msgid "Effects volume"
 msgstr "Effecten volume"
 
-#: src/replay/replay_info.cpp:136
-msgid "End of file while parsing teams"
-msgstr ""
-
 #: src/menu/results_menu.cpp:344
 msgid "Energy"
 msgstr "Energie"
@@ -1033,6 +1012,7 @@ msgid "Error: Unable to start the server"
 msgstr "Fout: Kon server niet starten"
 
 #: src/menu/network_connection_menu.cpp:523
+#: tools/servers/game_server/server.cpp:401
 #, c-format
 msgid ""
 "Error: Your server is not reachable from the internet. Check your firewall "
@@ -1372,6 +1352,10 @@ msgstr "Teams worden geladen:"
 msgid "Local teams:"
 msgstr "Lokale teams:"
 
+#: lib/warmux/net/download.cpp:424
+msgid "Login error, probably invalid email or password"
+msgstr ""
+
 #: src/menu/options_menu.cpp:119
 msgid "Low memory"
 msgstr ""
@@ -1379,16 +1363,6 @@ msgstr ""
 #: src/weapon/lowgrav.cpp:49
 msgid "LowGrav"
 msgstr "LageZwaartekracht"
-
-#: src/replay/replay.cpp:374
-#, c-format
-msgid "Malformed replay: action with datasize=%u"
-msgstr ""
-
-#: src/replay/replay.cpp:366
-#, c-format
-msgid "Malformed replay: action with unknow type %08X"
-msgstr ""
 
 #: src/menu/network_connection_menu.cpp:310
 msgid "Manual connection"
@@ -1572,11 +1546,6 @@ msgstr "Waarschuwing bij nieuwe speler?"
 msgid "Next character"
 msgstr "Bewegen"
 
-#. Copy ?
-#: src/replay/replay_info.cpp:61 src/replay/replay_info.cpp:163
-msgid "No comment."
-msgstr ""
-
 #: src/weapon/weapon.cpp:643
 #, c-format
 msgid "No element <%s> found in the xml config file!"
@@ -1585,6 +1554,10 @@ msgstr "Element <%s> niet gevonden het xml config bestand!"
 #: src/network/admin_commands.cpp:92
 msgid "No player connected"
 msgstr "Geen spelers verbonden"
+
+#: lib/warmux/net/download.cpp:197 lib/warmux/net/download.cpp:240
+msgid "No pointer"
+msgstr ""
 
 #: src/menu/results_menu.cpp:91
 msgid "Nobody!"
@@ -1800,6 +1773,11 @@ msgstr ""
 msgid "Random map"
 msgstr "Willekeurige kaart"
 
+#: lib/warmux/net/download.cpp:191 lib/warmux/net/download.cpp:234
+#, fuzzy, c-format
+msgid "Read only %i bytes"
+msgstr "Er is maar %i team."
+
 #: src/game/config.cpp:409
 msgid "Reading the default config file"
 msgstr "Standaard configbestand wordt gelezen"
@@ -1992,6 +1970,16 @@ msgstr "Iemand heeft een fopcadeau gemaakt!"
 msgid "Sorry, currently, no game is waiting for players"
 msgstr "Sorry, er is op dit moment geen spel dat op spelers wacht"
 
+#: tools/servers/game_server/server.cpp:386
+#, fuzzy, c-format
+msgid ""
+"Sorry, your version is not supported anymore. Supported versions are %s. You "
+"can download an updated version from http://www.warmux.org/wiki/download.php"
+msgstr ""
+"Sorry, uw versie wordt niet meer ondersteund. Ondersteunde versies zijn %s. "
+"U kunt een nieuwere versie downloaden op http://www.warmux.org/phpboost/"
+"download/download.php"
+
 #: src/menu/network_connection_menu.cpp:472
 #, fuzzy, c-format
 msgid ""
@@ -2034,11 +2022,6 @@ msgstr "Automatisch Geweer"
 #: src/weapon/supertux.cpp:211
 msgid "SuperTux"
 msgstr "SuperTux"
-
-#: src/replay/replay_info.cpp:102
-#, c-format
-msgid "Suspicious number of teams 0x%08X"
-msgstr ""
 
 #: src/menu/help_menu.cpp:105
 msgid "Switch between classical and replay interface"
@@ -2316,18 +2299,9 @@ msgstr "Onbekend commando"
 msgid "Unknown command of type %i"
 msgstr "Onbekend commando"
 
-#: src/replay/replay_info.cpp:60
-#, fuzzy
-msgid "Unknown."
-msgstr "Onbekend commando"
-
 #: src/game/game_mode.cpp:316
 msgid "Unlimited"
 msgstr "Onbegrensd"
-
-#: src/replay/replay_info.cpp:70
-msgid "Unspecified error or end of file"
-msgstr ""
 
 #: src/interface/man_machine_interface.cpp:1163
 msgid "Up"
@@ -2416,11 +2390,6 @@ msgstr "Warmux wordt gestart..."
 msgid "Warmux version "
 msgstr "Warmux versie "
 
-#: src/replay/replay.cpp:265
-#, c-format
-msgid "Warning, malformed replay with data of size %u"
-msgstr ""
-
 #: src/interface/man_machine_interface.cpp:1152
 #, fuzzy
 msgid "Weapon category 8"
@@ -2499,6 +2468,11 @@ msgstr "Verkeerde kaartnaam!"
 #: src/include/action_handler.cpp:243
 msgid "Wrong team!"
 msgstr "Verkeerd team!"
+
+#: lib/warmux/net/download.cpp:207 lib/warmux/net/download.cpp:250
+#, c-format
+msgid "Wrote %i/%i bytes"
+msgstr ""
 
 #: src/menu/network_menu.cpp:300 src/menu/network_menu.cpp:392
 msgid "You are alone. :-/"
@@ -2586,6 +2560,18 @@ msgstr "o Geluidsprofiel wordt geladen: %s"
 #, c-format
 msgid "o Opened audio at %d Hz %d bit"
 msgstr "o Audio geopend met %d Hz %d bit"
+
+#, fuzzy
+#~ msgid "Couldn't find map %s"
+#~ msgstr "Kan team %s niet vinden!"
+
+#, fuzzy
+#~ msgid "Couldn't open %s\n"
+#~ msgstr "Kon bestand %s niet openen"
+
+#, fuzzy
+#~ msgid "Unknown."
+#~ msgstr "Onbekend commando"
 
 #, fuzzy
 #~ msgid "  Most sold-out  :  "
@@ -2725,9 +2711,6 @@ msgstr "o Audio geopend met %d Hz %d bit"
 
 #~ msgid "Connect to an internet game"
 #~ msgstr "Verbind met een internetspel"
-
-#~ msgid "Couldn't fetch last version from %s"
-#~ msgstr "Kon de laatste versie van %s niet verwerven"
 
 #~ msgid "Dead of %s (%s)."
 #~ msgstr "Dood van %s (%s)."
@@ -2893,10 +2876,6 @@ msgstr "o Audio geopend met %d Hz %d bit"
 #~ msgid "Quit battle"
 #~ msgstr "Beëindig gevecht"
 
-#, fuzzy
-#~ msgid "Read only %i bytes"
-#~ msgstr "Er is maar %i team."
-
 #~ msgid "Refresh"
 #~ msgstr "Verversen"
 
@@ -2928,16 +2907,6 @@ msgstr "o Audio geopend met %d Hz %d bit"
 #~ "Sorry, uw versie wordt niet meer ondersteund. Ondersteunde versies zijn "
 #~ "%s. U kunt een nieuwere versie downloaden op http://www.warmux.org/wiki/"
 #~ "download.php"
-
-#, fuzzy
-#~ msgid ""
-#~ "Sorry, your version is not supported anymore. Supported versions are %s. "
-#~ "You can download an updated version from http://www.warmux.org/wiki/"
-#~ "download.php"
-#~ msgstr ""
-#~ "Sorry, uw versie wordt niet meer ondersteund. Ondersteunde versies zijn "
-#~ "%s. U kunt een nieuwere versie downloaden op http://www.warmux.org/"
-#~ "phpboost/download/download.php"
 
 #~ msgid "Sound error :"
 #~ msgstr "Fout met het geluid :"
